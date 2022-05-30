@@ -1,1 +1,1 @@
-teste
+import React from "react-native";
