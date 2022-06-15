@@ -1,15 +1,16 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity} from 'react-native';
 import styles from '../styles/paginainicial';
-
-
-
-
+import LOGO from "../../assets/logo.png"
 
 export default  function PaginaInicial({ navigation}) { 
 
   return(
     <View style={styles.container}>
+      <Image
+        style={styles.tinyLogo}
+        source={LOGO}
+      />
     <View>
       <Text style={styles.titulo}>
       PaH
@@ -19,7 +20,7 @@ export default  function PaginaInicial({ navigation}) {
       </Text>
       <Text style={styles.frase} >Seja Bem-vindo(a)</Text>
     </View>
-    
+
 
     <View style={styles.containerBTN} >
     <TouchableOpacity
