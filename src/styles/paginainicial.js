@@ -10,7 +10,9 @@ export default StyleSheet.create({
     tinyLogo:{
       width: 250,
       height: 250,
-      margin: 30
+      margin: 30,
+      marginTop:100,
+      marginLeft:50
     },
     titulo:{
       fontSize:30,
@@ -38,7 +40,8 @@ export default StyleSheet.create({
       alignItems: 'center',
       marginBottom:10,
       justifyContent:'center',
-      marginTop: 60
+      marginTop: 90,
+      marginLeft: 110
     },
     btnC:{
       height: 40,
@@ -48,9 +51,14 @@ export default StyleSheet.create({
       alignItems: 'center',
       marginBottom:10,
       justifyContent:'center',
+      marginLeft: 110
       
     },
     name:{
       color:'#fff'
+    },
+    backGround:{
+      height: "100%",
+      width: "100%"
     }
 });

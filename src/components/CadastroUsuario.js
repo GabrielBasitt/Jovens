@@ -1,14 +1,15 @@
 import React from "react";
-import { Text, View } from 'react-native'
+import { Text, View, ImageBackground } from 'react-native'
 
 
-
+const bolaVerde = require('../../assets/Bola_Verde.png')
 export default function CadastroUsuarioScreen() { 
     return( 
-<View style={{justifyContent: 'center', alignItems: 'center', flex: 1,}}>
-
-    <Text>Hiii hihih i'm the CadastroUsuario</Text> 
- </View>       
+<View>
+    <ImageBackground
+        source = {bolaVerde} style={{ height: "100%", width: "100%"}}  >
+        <Text style={{}}>Gostosin</Text>
+    </ImageBackground>
+            
+</View>    
 )}
-
-
