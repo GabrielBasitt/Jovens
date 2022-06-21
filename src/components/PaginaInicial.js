@@ -1,12 +1,17 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity} from 'react-native';
+import { View, Image, Text, TouchableOpacity, ImageBackground} from 'react-native';
 import styles from '../styles/paginainicial';
 import LOGO from "../../assets/logo.png"
+
+const bolaVerde = require('../../assets/Bola_Verde.png')
 
 export default  function PaginaInicial({ navigation}) { 
 
   return(
-    <View style={styles.container}>
+    
+    <View style={styles.container} >
+      <ImageBackground
+        source = {bolaVerde} style={styles.backGround}  >
       <Image
         style={styles.tinyLogo}
         source={LOGO}
@@ -21,8 +26,9 @@ export default  function PaginaInicial({ navigation}) {
       <Text style={styles.frase} >Seja Bem-vindo(a)</Text>
     </View>
 
-
+     
     <View style={styles.containerBTN} >
+   
     <TouchableOpacity
     style={styles.btnL}
     onPress={() => navigation.navigate('Login')}>
@@ -33,7 +39,9 @@ export default  function PaginaInicial({ navigation}) {
     onPress={() =>navigation.navigate('Cadastros')}>
     <Text style={styles.name}>Cadastro</Text> 
      </TouchableOpacity>
+     
     </View>
+    </ImageBackground>
     </View>
   )};
   

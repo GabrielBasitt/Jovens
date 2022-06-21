@@ -11,7 +11,7 @@ export default StyleSheet.create({
       width: 250,
       height: 250,
       margin: 30,
-      marginTop:100,
+      marginTop:20,
       marginLeft:50
     },
     titulo:{
@@ -41,7 +41,7 @@ export default StyleSheet.create({
       marginBottom:10,
       justifyContent:'center',
       marginTop: 90,
-      marginLeft: 110
+      margin:"auto"
     },
     btnC:{
       height: 40,
@@ -51,7 +51,7 @@ export default StyleSheet.create({
       alignItems: 'center',
       marginBottom:10,
       justifyContent:'center',
-      marginLeft: 110
+      margin:"auto"
       
     },
     name:{
@@ -59,6 +59,7 @@ export default StyleSheet.create({
     },
     backGround:{
       height: "100%",
-      width: "100%"
+      width: "100%",
+      alignItems:"center"
     }
 });
