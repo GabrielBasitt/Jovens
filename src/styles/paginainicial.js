@@ -5,14 +5,21 @@ export default StyleSheet.create({
     flex:1,
     justifyContent: 'center',
     alignItems:'center',
-    backgroundColor:'#fff'
+    backgroundColor:'#fff',
+    width:"100%",
+    height:"100%"
+  },
+  tudoNosso:{
+    zIndex:99,
+    justifyContent: 'center',
+    alignItems:'center'
   },
     tinyLogo:{
       width: 250,
       height: 250,
       margin: 30,
-      marginTop:20,
       marginLeft:50
+      
     },
     titulo:{
       fontSize:30,
@@ -29,8 +36,6 @@ export default StyleSheet.create({
       //fontFamily tem que ver
       // fontWeight
 
-      
-
     },
     btnL:{
       height: 40,
@@ -40,8 +45,8 @@ export default StyleSheet.create({
       alignItems: 'center',
       marginBottom:10,
       justifyContent:'center',
-      marginTop: 90,
-      margin:"auto"
+      marginTop: 40,
+      
     },
     btnC:{
       height: 40,
@@ -51,15 +56,17 @@ export default StyleSheet.create({
       alignItems: 'center',
       marginBottom:10,
       justifyContent:'center',
-      margin:"auto"
-      
+    
+     
     },
     name:{
       color:'#fff'
     },
     backGround:{
-      height: "100%",
-      width: "100%",
-      alignItems:"center"
+      height:"100%",
+      width:"100%",
+      position:"absolute",
+      zIndex:1
+      
     }
 });

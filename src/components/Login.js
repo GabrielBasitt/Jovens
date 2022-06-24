@@ -1,5 +1,5 @@
 import React from "react";
-import {Text, View , KeyboardAvoidingView, Image, TextInput, TouchableOpacity} from 'react-native'
+import {Text, View , KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
 import styles from '../styles/login'
 
 

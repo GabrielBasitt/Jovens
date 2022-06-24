@@ -11,7 +11,6 @@ export default StyleSheet.create({
       },
       textlogin:{
         fontSize:50,
-        fontWeight:50,
         paddingLeft : 70,
       },
         viewInputs:{
@@ -29,7 +28,6 @@ export default StyleSheet.create({
             borderWidth: 2,
             paddingLeft : 70,
             margin: 15,
-            placeholderTextColor : "#000",
             zIndex: 2,
             marginTop: 270,
 
@@ -42,7 +40,6 @@ export default StyleSheet.create({
             borderColor: '#000',
             borderWidth: 2,
             paddingLeft : 70,
-            placeholderTextColor : "#000",
             zIndex: 2
         },
         btnL:{
