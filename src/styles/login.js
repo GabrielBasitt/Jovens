@@ -9,13 +9,17 @@ export default StyleSheet.create({
         width: "100%",
         height: "100%"
       },
+      backGround:{
+        height: "100%",
+        width: "100%",
+        alignItems:"center",
+        zIndex: 1
+      },
       textlogin:{
         fontSize:50,
         paddingLeft : 70,
       },
         viewInputs:{
-            width: "100%",
-            height: 600,
             justifyContent: "center",
             alignItems: "center",
         },
@@ -23,7 +27,7 @@ export default StyleSheet.create({
             height: 30,
             width: 250,
             borderRadius: 20,
-            backgroundColor: 'transparent',
+            backgroundColor: '#fff',
             borderColor: '#000',
             borderWidth: 2,
             paddingLeft : 70,
@@ -36,7 +40,7 @@ export default StyleSheet.create({
             height: 30,
             width: 250,
             borderRadius: 20,
-            backgroundColor: 'transparent',
+            backgroundColor: '#fff',
             borderColor: '#000',
             borderWidth: 2,
             paddingLeft : 70,

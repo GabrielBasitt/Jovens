@@ -1,13 +1,15 @@
 import React from "react";
-import {Text, View , KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
 import styles from '../styles/login'
-
+const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
 export default function Logar({navigation}){
     return(
 
 
         <KeyboardAvoidingView style={styles.container}>
+            <ImageBackground 
+        source = {bolaVerde} style={styles.backGround}  >
             <View>
 
                 <View>
@@ -35,7 +37,7 @@ export default function Logar({navigation}){
 
                 </View>
                 </View>
-   
+    </ImageBackground>
 </KeyboardAvoidingView>
     );
     }

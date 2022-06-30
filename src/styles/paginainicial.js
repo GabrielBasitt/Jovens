@@ -17,29 +17,30 @@ export default StyleSheet.create({
     tinyLogo:{
       width: 250,
       height: 250,
-      margin: 30,
-      marginLeft:50
+      alignItems:'center',
+      justifyContent:'center'
       
     },
     titulo:{
-      fontSize:30,
+      fontSize:35,
       textAlign: 'center',
-      margin:10,
+      margin:10
       //fontFamily tem que ver
       // fontWeight
 
     },
     frase:{
-      fontSize:18,
+      fontSize:22,
       textAlign: 'center',
       margin:3,
+      marginBottom:70
       //fontFamily tem que ver
       // fontWeight
 
     },
     btnL:{
       height: 40,
-      width:150,
+      width:170,
       borderRadius: 20,
       backgroundColor:'#000000',
       alignItems: 'center',
@@ -50,7 +51,7 @@ export default StyleSheet.create({
     },
     btnC:{
       height: 40,
-      width:150,
+      width:170,
       borderRadius: 20,
       backgroundColor:'#000000',
       alignItems: 'center',
