@@ -7,7 +7,7 @@ export default function Feed() {
     return( 
 <View style={{backgroundColor:'#fff',justifyContent: 'center', alignItems: 'center', flex: 1,}}>
 
-    <Text style={{fontSize: 200}}>oi dai</Text>
-    <Text style={{fontSize: 100}}>porque não me mamas?</Text>
+    <Text style={{fontSize: 20}}>oi Paulo</Text>
+    <Text style={{fontSize: 10}}>porque não me mamas?</Text>
  </View>       
 )}

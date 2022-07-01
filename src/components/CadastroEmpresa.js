@@ -28,8 +28,13 @@ export default function CadastroEmpresaScreen({navigation}) {
                     autoCorrect={false}
                     onChange={()=>{}} />
 
+                    <TextInput style = {styles.inpTelefone}
+                    placeholder="Insira o telefone da sua empresa..."
+                    autoCorrect={false} 
+                    onChange={()=>{}}/>
+
                     <TextInput style = {styles.inpEmail}
-                    placeholder="Insira seu e-mail..."
+                    placeholder="Insira seu E-mail..."
                     autoCorrect={false}
                     onChange={()=>{}} />
 

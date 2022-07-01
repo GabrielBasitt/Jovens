@@ -15,12 +15,12 @@ export default function CadastroUsuarioScreen({navigation}) {
                 <View style ={styles.viewInputs}>
                     
                     <TextInput style = {styles.inpName}
-                    placeholder="Insira seu nome..."
+                    placeholder="Insira seu nome completo..."
                     autoCorrect={false}
                     onChange={()=>{}} />
                     
                     <TextInput style = {styles.inpCPF}
-                    placeholder="Insira seu CPF.."
+                    placeholder="Insira seu CPF..."
                     autoCorrect={false} 
                     onChange={()=>{}}/>
                     
@@ -29,13 +29,18 @@ export default function CadastroUsuarioScreen({navigation}) {
                     autoCorrect={false}
                     onChange={()=>{}} />
 
+                    <TextInput style = {styles.inpTelefone}
+                    placeholder="Insira seu telefone..."
+                    autoCorrect={false}
+                    onChange={()=>{}} />
+
                     <TextInput style = {styles.inpEmail}
-                    placeholder="Insira seu e-mail..."
+                    placeholder="Insira seu E-mail..."
                     autoCorrect={false}
                     onChange={()=>{}} />
 
                     <TextInput style = {styles.inpSenha}
-                    placeholder="Insira sua senha..."
+                    placeholder="Insira uma senha..."
                     autoCorrect={false}
                     onChange={()=>{}} />
                     

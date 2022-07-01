@@ -14,7 +14,7 @@ export default  function PaginaInicial({ navigation}) {
     
       <Text style={styles.titulo}> PaH </Text>
       <Text style={styles.frase}> Pessoas são a esperança </Text>
-      <Text style={styles.frase} >Seja Bem-vindo(a)</Text>
+      <Text style={styles.frase} >Seja Bem-vindo(a)!</Text>
     
     <TouchableOpacity style={styles.btnL} onPress={() => navigation.navigate('Login')}>
           <Text style={styles.name}>Login</Text> 
