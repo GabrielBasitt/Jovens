@@ -8,6 +8,6 @@ export default function Feed() {
 <View style={{backgroundColor:'#fff',justifyContent: 'center', alignItems: 'center', flex: 1,}}>
 
     <Text style={{fontSize: 20}}>oi Paulo</Text>
-    <Text style={{fontSize: 10}}>porque não me mamas?</Text>
+    <Text style={{fontSize: 10}}>porque não me amas?</Text>
  </View>       
 )}
