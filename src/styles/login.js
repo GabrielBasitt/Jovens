@@ -18,7 +18,17 @@ export default StyleSheet.create({
       textlogin:{
         fontSize:50,
         paddingLeft : 70,
+        marginTop:110
       },
+      frase:{
+        fontSize:22,
+        textAlign: 'center',
+        margin:3,
+        marginTop:22,
+        marginBottom:160
+        //fontFamily tem que ver
+        // fontWeight
+      },  
         viewInputs:{
             justifyContent: "center",
             alignItems: "center",
@@ -27,20 +37,20 @@ export default StyleSheet.create({
             height: 30,
             width: 250,
             borderRadius: 20,
-            backgroundColor: '#fff',
+            backgroundColor: 'transparent',
             borderColor: '#000',
             borderWidth: 2,
             paddingLeft : 70,
             margin: 15,
             zIndex: 2,
-            marginTop: 270,
+            marginTop: 80,
 
         },
         inpSenha:{ 
             height: 30,
             width: 250,
             borderRadius: 20,
-            backgroundColor: '#fff',
+            backgroundColor: 'transparent',
             borderColor: '#000',
             borderWidth: 2,
             paddingLeft : 70,

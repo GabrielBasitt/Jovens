@@ -24,7 +24,8 @@ export default StyleSheet.create({
     titulo:{
       fontSize:35,
       textAlign: 'center',
-      margin:10
+      margin:10,
+      marginBottom:40
       //fontFamily tem que ver
       // fontWeight
 
@@ -32,11 +33,18 @@ export default StyleSheet.create({
     frase:{
       fontSize:22,
       textAlign: 'center',
-      margin:3,
-      marginBottom:70
+      margin:1,
       //fontFamily tem que ver
       // fontWeight
 
+    },
+    frase2:{
+      fontSize:22,
+      textAlign: 'center',
+      padding:20,
+      marginBottom:110
+      //fontFamily tem que ver
+      // fontWeight
     },
     btnL:{
       height: 40,
