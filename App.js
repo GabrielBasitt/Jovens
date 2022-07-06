@@ -6,8 +6,6 @@ import Login from './src/components/Login'
 import CadastroUsuarioScreen from './src/components/CadastroUsuario'
 import Home from './src/components/Routes.js/Home'
 import Cadastros from './src/components/Routes.js/Cadastros'
-import Feed from './src/components/Feed';
-
 
 
 const Stack = createStackNavigator();
@@ -16,8 +14,8 @@ export default function App() {
   
   return(
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Feed'>
-      <Stack.Screen name = "Feed" component = {Feed}  options={{headerShown:false}}/>
+      <Stack.Navigator initialRouteName='PaginaInicial'>
+        <Stack.Screen name = "PaginaInicial" component = {PaginaInicial}  options={{headerShown:false}}/>    
         <Stack.Screen name = "Login" component = {Login} /> 
         <Stack.Screen name = "Cadastro" component = {CadastroUsuarioScreen} />
         <Stack.Screen name = "Home" component = {Home} />
@@ -26,9 +24,6 @@ export default function App() {
       </Stack.Navigator>
       
     </NavigationContainer>
-    
-   
   )
 
   }
-//<Stack.Screen name = "PaginaInicial" component = {PaginaInicial}  options={{headerShown:false}}/>
