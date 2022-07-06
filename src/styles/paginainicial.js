@@ -42,13 +42,13 @@ export default StyleSheet.create({
       fontSize:22,
       textAlign: 'center',
       padding:20,
-      marginBottom:110
+      marginBottom:80
       //fontFamily tem que ver
       // fontWeight
     },
     btnL:{
       height: 40,
-      width:170,
+      width:200,
       borderRadius: 20,
       backgroundColor:'#000000',
       alignItems: 'center',
@@ -59,12 +59,13 @@ export default StyleSheet.create({
     },
     btnC:{
       height: 40,
-      width:170,
+      width:200,
       borderRadius: 20,
       backgroundColor:'#000000',
       alignItems: 'center',
-      marginBottom:10,
+      marginBottom:40,
       justifyContent:'center',
+      marginTop:15
     
      
     },

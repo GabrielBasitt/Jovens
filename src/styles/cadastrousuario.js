@@ -20,8 +20,8 @@ export default StyleSheet.create({
     alignItems: "center",
 },
 inpName:{
-  height: 35,
-  width: 300,
+  height: 40,
+  width: 350,
   borderRadius: 20,
   backgroundColor: '#fff',
   borderColor: '#000',
@@ -29,12 +29,12 @@ inpName:{
   margin: 20,
   zIndex: 2,
   textAlign:"center",
-  marginTop: 70
- 
+  marginTop: 135
+
 },
 inpCPF:{
-  height: 35,
-    width: 300,
+  height: 40,
+    width: 350,
     borderRadius: 20,
     backgroundColor: '#fff',
     borderColor: '#000',
@@ -45,8 +45,8 @@ inpCPF:{
     
 },
 inpData:{
-    height: 35,
-    width: 300,
+    height: 40,
+    width: 350,
     borderRadius: 20,
     backgroundColor: '#fff',
     borderColor: '#000',
@@ -57,8 +57,8 @@ inpData:{
     
 },
 inpTelefone:{
-      height: 35,
-        width: 300,
+      height: 40,
+        width: 350,
         borderRadius: 20,
         backgroundColor: '#fff',
         borderColor: '#000',
@@ -69,8 +69,8 @@ inpTelefone:{
 
 },
 inpEmail:{ 
-    height: 35,
-    width: 300,
+    height: 40,
+    width: 350,
     borderRadius: 20,
     backgroundColor: '#fff',
     borderColor: '#000',
@@ -81,8 +81,8 @@ inpEmail:{
 
 },
 inpSenha:{ 
-    height: 35,
-    width: 300,
+    height: 40,
+    width: 350,
     borderRadius: 20,
     backgroundColor: '#fff',
     borderColor: '#000',
@@ -94,7 +94,7 @@ inpSenha:{
 },
 btnC:{
     height: 40,
-    width:170,
+    width:200,
     borderRadius: 20,
     backgroundColor:'#000000',
     alignItems: 'center',

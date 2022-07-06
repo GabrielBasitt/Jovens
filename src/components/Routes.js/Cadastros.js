@@ -8,7 +8,7 @@ const Tab = createMaterialTopTabNavigator();
 
 export default function MyTabs() {
   return (
-    <Tab.Navigator initialRouteName='CadastroUsuario'  >
+    <Tab.Navigator initialRouteName='CadastroUsuario' >
         <Tab.Screen name="CadastroUsuario" component={CadastroUsuarioScreen} />
         <Tab.Screen name="CadastroEmpresa" component={CadastroEmpresaScreen}  />
     </Tab.Navigator>

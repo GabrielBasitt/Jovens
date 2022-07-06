@@ -1,7 +1,9 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Text, StatusBar, Image } from 'react-native';
 import styles from '../styles/feed'
-// data[0].feed[]
+import { Divider } from "react-native-elements" ;     
+
+
 const data = [ 
       {
         "id": 1,
@@ -36,7 +38,7 @@ const Item = ({image, descricao, clienteId, title }) => (
 <Text style={styles.title}>{title} </Text>
 <Text style={styles.descricao}>{descricao} </Text>
 <Image
-style={{ height: 300, width: 300 }}
+style={{ height: 300, width: 300 , alignItems:'center', marginBottom: 40}}
 source={{ uri: image }} 
 resizeMode="contain"
 />
@@ -44,25 +46,29 @@ resizeMode="contain"
 
 )
 
-<<<<<<< HEAD
-
-export default function Feed() { 
-    return( 
-<View style={{backgroundColor:'#fff',justifyContent: 'center', alignItems: 'center', flex: 1,}}>
-
-    <Text style={{fontSize: 20}}>oi Paulo</Text>
-    <Text style={{fontSize: 10}}>porque não me amas?</Text>
- </View>       
-)}
-=======
 const renderItem = ({item}) => (
   <Item key={item.id} clienteId={item.clienteId} title={item.title} descricao={item.descricao} image={item.image} />
 )
+
+const header = () => {
+  return (
+    <View>
+      <Text style={styles.title}> Feed </Text>
+      <Divider orientation="vertical" />
+    </View>
+  );
+};
+
+const separator = () => {
+  return <Divider orientation="vertical" />;
+};
+
 return(
   <View style={styles.container}>
     {data && (
       <FlatList
-     
+      ListHeaderComponent={header}
+      ItemSeparatorComponent={separator}
       data={data}
       renderItem={renderItem}
       keyExtractor={(item)=>item.id}
@@ -71,4 +77,3 @@ return(
   </View>
 )
 }
->>>>>>> 4457544f4b4d7fb2b2af2f798f53c1b8ce37379b
