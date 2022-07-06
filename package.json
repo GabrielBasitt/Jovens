@@ -17,13 +17,8 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "~3.10.1",
     "react-native-tab-view": "^3.1.1",
-<<<<<<< HEAD
-    "react-native-vector-icons": "^9.2.0",
-    "react-native-web": "0.17.1"
-=======
     "react-native-web": "0.17.1",
     "styled-components": "^5.3.5"
->>>>>>> 4457544f4b4d7fb2b2af2f798f53c1b8ce37379b
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
