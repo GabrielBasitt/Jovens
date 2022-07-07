@@ -3,14 +3,15 @@ import {StyleSheet} from 'react-native'
 export default StyleSheet.create({ 
   container:{
     width: '100%',
-    borderRadius: 10,
-    alignItems:'center'
+    alignItems:'center',
+    justifyContent:'center'
   },
   title:{
 
         fontSize: 20,
         textAlign: 'center',
         margin:10,
+        fontWeight:'bold',
 
   },
 descricao:{
