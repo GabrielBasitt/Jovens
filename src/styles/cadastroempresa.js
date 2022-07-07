@@ -18,21 +18,21 @@ viewInputs:{
       alignItems: "center",
   },
   inpName:{
-    height: 35,
-    width: 300,
+    height: 40,
+    width: 350,
     borderRadius: 20,
-    backgroundColor: 'transparent',
+    backgroundColor: '#fff',
     borderColor: '#000',
     borderWidth: 2,
     margin: 20,
     zIndex: 2,
     textAlign:"center",
-    marginTop: 70
+    marginTop: 135
    
   },
   inpCnpj:{
-    height: 35,
-      width: 300,
+    height: 40,
+      width: 350,
       borderRadius: 20,
       backgroundColor: '#fff',
       borderColor: '#000',
@@ -43,8 +43,8 @@ viewInputs:{
       
   },
   inpData:{
-      height: 35,
-      width: 300,
+      height: 40,
+      width: 350,
       borderRadius: 20,
       backgroundColor: '#fff',
       borderColor: '#000',
@@ -55,8 +55,8 @@ viewInputs:{
 
   },
   inpTelefone:{
-        height: 35,
-        width: 300,
+        height: 40,
+        width: 350,
         borderRadius: 20,
         backgroundColor: '#fff',
         borderColor: '#000',
@@ -67,8 +67,8 @@ viewInputs:{
       
   },
   inpEmail:{ 
-      height: 35,
-      width: 300,
+      height: 40,
+      width: 350,
       borderRadius: 20,
       backgroundColor: '#fff',
       borderColor: '#000',
@@ -79,8 +79,8 @@ viewInputs:{
 
   },
   inpSenha:{ 
-      height: 35,
-      width: 300,
+      height: 40,
+      width: 350,
       borderRadius: 20,
       backgroundColor: '#fff',
       borderColor: '#000',
@@ -92,7 +92,7 @@ viewInputs:{
   },
   btnC:{
       height: 40,
-      width:170,
+      width:200,
       borderRadius: 20,
       backgroundColor:'#000000',
       alignItems: 'center',

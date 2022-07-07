@@ -9,32 +9,32 @@ const Tab = createBottomTabNavigator();
 export default function MyTabs() {
     return (
       <Tab.Navigator initialRouteName='Home' screenOptions={{
-          tabBarStyle:{
-            backgroundColor: '#09b291'
+        tabBarStyle:{
+            backgroundColor: '#fff'
           }
       }}
       >
         <Tab.Screen name="PostsAdm" component={PostsAdm} options={{ 
-          tabBarLabel: 'PostsAdm',
-          tabBarColor:'#09b291',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="account-group" color={color} size={26} /> 
+          headerShown:false,
+          tabBarShowLabel:false,
+          tabBarIcon: ({ focused}) => (
+            <MaterialCommunityIcons name="account-group" color={focused ? '#09b291' : 'black'} size={26} /> 
             ),
           }}
         />
         <Tab.Screen name="Home" component={Feed} options={{ 
-          tabBarLabel: 'Home',
-          tabBarColor:'#09b291',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="home" color={color} size={26} /> 
+          headerShown:false,
+          tabBarShowLabel:false,
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons name="home" color={focused ? '#09b291' : 'black'} size={26} /> 
             ),
           }}
         />
         <Tab.Screen name="Perfil" component={PerfilUser} options={{ 
-          tabBarLabel: 'Perfil',
-          tabBarColor:'#09b291',
-          tabBarIcon: ({ color }) => (
-            <Feather name="user" color={color} size={26} /> 
+          headerShown:false,
+          tabBarShowLabel:false,
+          tabBarIcon: ({ focused }) => (
+            <Feather name="user" color={focused ? '#09b291' : 'black'} size={26} /> 
             ),
           }} />
       </Tab.Navigator> 

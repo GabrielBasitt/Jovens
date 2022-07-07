@@ -17,7 +17,7 @@ export default StyleSheet.create({
       },
       textlogin:{
         fontSize:50,
-        paddingLeft : 70,
+        textAlign:'center',
         marginTop:110
       },
       frase:{
@@ -34,37 +34,38 @@ export default StyleSheet.create({
             alignItems: "center",
         },
         inpEmail:{ 
-            height: 30,
-            width: 250,
+            height: 40,
+            width:350,
             borderRadius: 20,
-            backgroundColor: 'transparent',
             borderColor: '#000',
+            backgroundColor:"#fff",
             borderWidth: 2,
-            paddingLeft : 70,
             margin: 15,
             zIndex: 2,
             marginTop: 80,
+            textAlign:'center'
 
         },
         inpSenha:{ 
-            height: 30,
-            width: 250,
+            height: 40,
+            width: 350,
+            backgroundColor:"#fff",
             borderRadius: 20,
-            backgroundColor: 'transparent',
             borderColor: '#000',
             borderWidth: 2,
-            paddingLeft : 70,
-            zIndex: 2
+            zIndex: 2,
+            textAlign:'center'
         },
         btnL:{
             height: 40,
-            width:120,
+            width:200,
             borderRadius: 20,
             backgroundColor:'#000000',
             alignItems: 'center',
             justifyContent:'center',
             zIndex: 2,
-            marginTop: 20
+            marginTop: 40,
+            marginBottom:10
         },
         name:{
           color:'#fff'

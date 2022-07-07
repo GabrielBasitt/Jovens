@@ -1,68 +1,76 @@
 import React from 'react';
-import { View, FlatList, StyleSheet, Text, StatusBar, Image } from 'react-native';
+import { View, FlatList, StyleSheet, Text, StatusBar, Image, ScrollView } from 'react-native';
 import styles from '../styles/feed'
-// data[0].feed[]
+import { Divider } from "react-native-elements" ;     
+
+
 const data = [ 
       {
         "id": 1,
-        "title" : 'Alguma coisa',
-        "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/instagram-clone/1.jpeg",
+        "title" : 'Você pode me ajudar?',
+        "image": "https://i0.wp.com/www.tempojunto.com/wp-content/uploads/2021/08/sem-titulo.jpg?resize=876%2C880&ssl=1",
         "aspectRatio": 0.834,
-        "descricao": "Working hard at Rocketseat!",
+        "descricao": "Sou mãe solteira e não tenho condiçôes de sustento com fralda, leite e demais cuidados com o bebê, enquanto estou a procura de um emprego gostaria da sua ajuda.",
         "clienteId": 1
       },
       {
         "id": 2,
-        "title" : 'Alguma coisa',
-        "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/instagram-clone/2.jpeg",
+        "title" : 'Aceito doações',
+        "image": "https://agorarn.com.br/files/uploads/2020/11/whatsapp-image-at-1-8-930x524.jpeg",
         "aspectRatio": 0.834,
-        "descricao": "Code, code and more code!",
+        "descricao": "Somos uma ONG de cães e estamos aceitando doações, entre em contato via link.",
         "clienteId": 2
       },
       {
         "id": 3,
-        "title" : 'Alguma coisa',
-        "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/instagram-clone/3.jpeg",
+        "title" : 'Melhore nossa estrutura',
+        "image": "https://s01.video.glbimg.com/x240/6411964.jpg",
         "aspectRatio": 0.834,
-        "descricao": "Rocketships fly away!",
+        "descricao": "Nossa escola está com uma situação desconfortável para os alunos, gostaríamos da sua ajuda!",
         "clienteId": 3
       }
 ]
 export default function Feed(){
-    
+   
+  
 const Item = ({image, descricao, clienteId, title }) => (
 <View>
 <Text>{clienteId}</Text>
 <Text style={styles.title}>{title} </Text>
-<Text style={styles.descricao}>{descricao} </Text>
+
 <Image
-style={{ height: 300, width: 300 }}
+style={{ height: 300, width: 300 , alignItems:'center', marginBottom: 40}}
 source={{ uri: image }} 
 resizeMode="contain"
 />
+<Text style={styles.descricao}>{descricao} </Text>
 </View>
 
 )
 
-<<<<<<< HEAD
-
-export default function Feed() { 
-    return( 
-<View style={{backgroundColor:'#fff',justifyContent: 'center', alignItems: 'center', flex: 1,}}>
-
-    <Text style={{fontSize: 20}}>oi Paulo</Text>
-    <Text style={{fontSize: 10}}>porque não me amas?</Text>
- </View>       
-)}
-=======
 const renderItem = ({item}) => (
   <Item key={item.id} clienteId={item.clienteId} title={item.title} descricao={item.descricao} image={item.image} />
 )
+
+const header = () => {
+  return (
+    <View>
+      <Text style={styles.title}> Feed </Text>
+      <Divider orientation="vertical" />
+    </View>
+  );
+};
+
+const separator = () => {
+  return <Divider orientation="vertical" />;
+};
+
 return(
   <View style={styles.container}>
     {data && (
       <FlatList
-     
+      ListHeaderComponent={header}
+      ItemSeparatorComponent={separator}
       data={data}
       renderItem={renderItem}
       keyExtractor={(item)=>item.id}
@@ -71,4 +79,3 @@ return(
   </View>
 )
 }
->>>>>>> 4457544f4b4d7fb2b2af2f798f53c1b8ce37379b
