@@ -23,7 +23,7 @@ export default function CadastroUsuarioScreen({ navigation }) {
             const requestOptons = {
                 method: 'post',
                 Headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify({
+                body:JSON.stringify({
                     nome_completo: nome_completo,
                     cpf: cpf,
                     telefone: telefone,
@@ -66,38 +66,39 @@ export default function CadastroUsuarioScreen({ navigation }) {
                         <TextInput style={styles.inpName}
                             placeholder="Insira seu nome completo..."
                             autoCorrect={false}
-                            onChange={(text) => { setNome_completo(text)}} 
-                            value={nome_completo}/>
+                            onChange={(nome_completo) => { setNome_completo(nome_completo.target.value)}
+                    
+                           }/>
 
                         <TextInput style={styles.inpCPF}
                             placeholder="Insira seu CPF..."
                             autoCorrect={false}
-                            onChange={(text) => { setCpf(text)}} 
-                            value={cpf}/>
+                            onChange={(cpf) => { setCpf(cpf.target.value)} 
+                            }/>
 
                         <TextInput style={styles.inpData}
                             placeholder="Insira sua data de nascimento..."
                             autoCorrect={false}
-                            onChange={(text) => { setTelefone(text)}} 
-                            value={telefone}/>
+                            onChange={(data_nascimento) => { setData_nascimento(data_nascimento.target.value)} 
+                            }/>
 
                         <TextInput style={styles.inpTelefone}
                             placeholder="Insira seu telefone..."
                             autoCorrect={false}
-                            onChange={(text) => { setData_nascimento(text)}} 
-                            value={data_nascimento}/>
+                            onChange={(telefone) => { setTelefone(telefone.target.value)} 
+                            }/>
 
                         <TextInput style={styles.inpEmail}
                             placeholder="Insira seu E-mail..."
                             autoCorrect={false}
-                            onChange={(text) => { setEmail(text)}} 
-                            value={email}/>
+                            onChange={(email) => { setEmail(email.target.value)} 
+                            }/>
 
                         <TextInput style={styles.inpSenha}
                             placeholder="Insira uma senha..."
                             autoCorrect={false}
-                            onChange={ senha => { SetSenha(senha)}} 
-                            value={senha}/>
+                            onChange={ (senha) => { SetSenha(senha.target.value)}} 
+                            />
 
                         <TouchableOpacity
                             style={styles.btnC}
