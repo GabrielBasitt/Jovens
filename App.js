@@ -10,7 +10,6 @@ import CadastroEmpresa from './src/components/CadastroEmpresa';
 import { getPessoa } from '../jovens-server/src/queries';
 import { Keyboard } from 'react-native';
 
-
 const Stack = createStackNavigator(); 
 
 

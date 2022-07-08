@@ -3,9 +3,11 @@ import { Text, TextInput, View, ImageBackground, KeyboardAvoidingView, Touchable
 import styles from "../styles/cadastrousuario"
 import React from "react";
 
+
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
 export default function CadastroUsuarioScreen({ navigation }) {
+  
 
     const [nome_completo, setNome_completo] = useState('')
     const [cpf, setCpf] = useState('')
