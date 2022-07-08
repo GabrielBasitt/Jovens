@@ -1,36 +1,43 @@
-import React, { Component } from "react";
-import { Text, View, TouchableHighlight, Image } from 'react-native'
-import styles from '../styles/perfil'
+// import React, { Component } from "react";
+// import { View, Text, Button, StyleSheet} from 'react-native'
+// import styles from '../styles/perfil'
+// import {Avatar, Title, Caption, Text, TouchableRipple,} from "react-native-paper"
+// import { SafeAreaView } from "react-native-safe-area-context";
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
+// const PerfilScreen = () => {
+//   return(
+//     <SafeAreaView>
+//     <View style={styles.container}>
+//       <View style ={styles.userInfoSection}>
+//         <View style={{flexDirection: 'row', marginTop: 15}}>
+//           <Avatar.Image
+//           source={{
+//             uri: 'https://ichigoinu.com/assets/img/ichigo_hero.png' ,}} size={80}/>
 
-  class PerfilUser extends Component{
- constructor(props) {
-      super(props);
+//         </View>
+//         <View style={{marginLeft:20}}>
+//         <Title style ={[styles.title, {marginTop:15, marginBottom: 5}]}>Coe manin</Title>
+//         <Caption style ={styles.caption}>@Coe_zé</Caption>
+//         </View>
+//       </View>
+//     </View>
 
-        this.state = {
-            nome: "meu nome",
-            idade: 30,
-          avatar_url: "../../assets/todoroki.jpg", 
-         };
-     }
-     render() {
-         return(
-        <View style={styles.container}>
-     <Text>Perfil</Text>
-  <Image source={{ uri: this.state.avatar_url}} style={styles.avatar}/>
-
-   <Text style={styles.label}>Nome</Text>
-    <Text>{this.state.nome}</Text>       
-
-     <Text style={styles.label}>Idade</Text>
-    <Text>{this.state.idade}</Text>
-
-     <TouchableHighlight style={styles.botao}>
-           <Text style={styles.textoBotao}>Atualizar</Text>
-      </TouchableHighlight>       
- </View>
-         );
-  }}
-
+//     <View style={styles.userInfoSection}>
+//       <View style={styles.row}>
+//         <Icon name="map-marker-radius"  color ="#777777" size={20} />
+//         <Text style={{color:"#777777", marginLeft: 20}}>Rio Verde</Text>
+//       </View>
+//       <View style={styles.row}>
+//         <Icon name="phone"  color ="#777777" size={20} />
+//         <Text style={{color:"#777777", marginLeft: 20}}> (48) 98483-2311</Text>
+//       </View>
+//       <View style={styles.row}>
+//         <Icon name="phone"  color ="#777777" size={20} />
+//         <Text style={{color:"#777777", marginLeft: 20}}> 25 anos</Text>
+//       </View>
+//     </View>
+//     </SafeAreaView>
+//   )
+// }
  
 
- export default PerfilUser;
