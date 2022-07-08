@@ -27,7 +27,7 @@ export default function CadastroUsuarioScreen({ navigation }) {
                     nome_completo: nome_completo,
                     cpf: cpf,
                     telefone: telefone,
-                    data_nascimento,
+                    data_nascimento: data_nascimento,
                     email: email,
                     senha: senha
                 })
@@ -96,12 +96,12 @@ export default function CadastroUsuarioScreen({ navigation }) {
                         <TextInput style={styles.inpSenha}
                             placeholder="Insira uma senha..."
                             autoCorrect={false}
-                            onChange={(text) => { SetSenha(text)}} 
+                            onChange={ senha => { SetSenha(senha)}} 
                             value={senha}/>
 
                         <TouchableOpacity
                             style={styles.btnC}
-                            onPress={() => navigation.navigate('Login')}>
+                            onPress={postUser}>
                             <Text style={styles.cadastrar}>Cadastrar</Text>
                         </TouchableOpacity>
 

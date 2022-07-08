@@ -30,13 +30,13 @@ export default function MyTabs() {
             ),
           }}
         />
-        <Tab.Screen name="Perfil" component={PerfilUser} options={{ 
+        { <Tab.Screen name="Perfil" component={PerfilUser} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <Feather name="user" color={focused ? '#09b291' : 'black'} size={26} /> 
             ),
-          }} />
+          }} /> }
       </Tab.Navigator> 
     );
   }

@@ -1,10 +1,11 @@
- import React, { Component } from "react";
-import { View, Text, Button, StyleSheet} from 'react-native'
+import React, { Component } from "react";
+import { View} from 'react-native'
 import styles from '../styles/perfil'
- import {Avatar, Title, Caption, Text, TouchableRipple,} from "react-native-paper"
+import {Avatar, Title, Caption, Text, TouchableRipple,} from "react-native-paper"
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
-const PerfilScreen = () => {
+
+const PerfilUser = () => {
   return(
     <SafeAreaView>
     <View style={styles.container}>
@@ -39,5 +40,4 @@ const PerfilScreen = () => {
     </SafeAreaView>
   )
 }
- 
-
+export default PerfilUser;
