@@ -1,4 +1,10 @@
 {
   "webpackServerPort": 19006,
-  "expoServerPort": null
+  "expoServerPort": null,
+  "packagerPort": 19000,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://r5-nuk.anonymous.jovens.exp.direct",
+  "packagerNgrokUrl": "https://r5-nuk.anonymous.jovens.exp.direct",
+  "ngrokPid": 4844,
+  "devToolsPort": 19002
 }
