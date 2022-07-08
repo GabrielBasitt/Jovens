@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator} from '@react-navigation/stack';
 import PaginaInicial from './src/components/PaginaInicial'
@@ -6,9 +6,13 @@ import Login from './src/components/Login'
 import CadastroUsuarioScreen from './src/components/CadastroUsuario'
 import Home from './src/components/Routes.js/Home'
 import Cadastros from './src/components/Routes.js/Cadastros'
+import CadastroEmpresa from './src/components/CadastroEmpresa';
+import { getPessoa } from '../jovens-server/src/queries';
+import { Keyboard } from 'react-native';
 
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator(); 
+
 
 export default function App() {
   
