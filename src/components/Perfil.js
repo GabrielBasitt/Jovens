@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { View} from 'react-native'
 import styles from '../styles/perfil'
+<<<<<<< HEAD
 import {Avatar, Title, Caption, Text,} from "react-native-paper"
+=======
+import {Avatar, Title, Caption, Text, TouchableRipple,} from "react-native-paper"
+>>>>>>> d47d5e8c9ea19ef2b6f4ece004c0e30c3ea648bf
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
 
@@ -22,6 +26,7 @@ const PerfilUser = () => {
         </View>
       </View>
     </View>
+<<<<<<< HEAD
 
     <View style={styles.userInfoSection}>
       <View style={styles.row}>
@@ -44,3 +49,24 @@ export default PerfilUser;
  
 
 
+=======
+
+    <View style={styles.userInfoSection}>
+      <View style={styles.row}>
+        <Icon name="map-marker-radius"  color ="#777777" size={20} />
+        <Text style={{color:"#777777", marginLeft: 20}}>Rio Verde</Text>
+      </View>
+      <View style={styles.row}>
+        <Icon name="phone"  color ="#777777" size={20} />
+        <Text style={{color:"#777777", marginLeft: 20}}> (48) 98483-2311</Text>
+      </View>
+      <View style={styles.row}>
+        <Icon name="phone"  color ="#777777" size={20} />
+        <Text style={{color:"#777777", marginLeft: 20}}> 25 anos</Text>
+      </View>
+    </View>
+    </SafeAreaView>
+  )
+}
+export default PerfilUser;
+>>>>>>> d47d5e8c9ea19ef2b6f4ece004c0e30c3ea648bf

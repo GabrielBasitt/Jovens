@@ -38,13 +38,13 @@ const Tab = createBottomTabNavigator();
             ),
           }}
         />
-        <Tab.Screen name="Perfil" component={ProfileStackScreen} options={{ 
+        { <Tab.Screen name="Perfil" component={PerfilUser} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <Feather name="user" color={focused ? '#09b291' : 'black'} size={26} /> 
             ),
-          }} />
+          }} /> }
       </Tab.Navigator> 
     
  )
