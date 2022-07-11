@@ -99,7 +99,7 @@ export default function CadastroUsuarioScreen({ navigation }) {
 
                         <TouchableOpacity
                             style={styles.btnC}
-                            onPress={() => navigation.navigate('Login')}>
+                            onPress={postUser}>
                             <Text style={styles.cadastrar}>Cadastrar</Text>
                         </TouchableOpacity>
 
