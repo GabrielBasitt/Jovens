@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PostsAdm from '../PostsAdm'
 import Feed from '../Feed'
 import PerfilUser from '../Perfil'
+import Post from '../Post'
 import {MaterialCommunityIcons, Feather} from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -27,6 +28,15 @@ export default function MyTabs() {
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <MaterialCommunityIcons name="home" color={focused ? '#09b291' : 'black'} size={26} /> 
+            ),
+          }}
+        />
+        <Tab.Screen name="Post" component={Post} options={{ 
+          headerShown:false,
+          tabBarShowLabel:false,
+          tabBarIcon: ({ focused}) => (
+            <MaterialCommunityIcons name="plus" color={focused ? '#09b291' : 'black'} size={26} /> 
+
             ),
           }}
         />
