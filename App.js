@@ -12,7 +12,11 @@ const Stack = createStackNavigator();
 
 
 export default function App() {
-  
+    
+
+    const addUser = () => {
+      getPessoa()
+  }
   return(
     <NavigationContainer>
       <Stack.Navigator initialRouteName='PaginaInicial'>

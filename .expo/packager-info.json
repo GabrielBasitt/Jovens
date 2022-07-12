@@ -1,9 +1,9 @@
 {
-  "expoServerPort": null,
+  "expoServerPort": 19000,
   "packagerPort": 19000,
-  "expoServerNgrokUrl": "https://w4-3hg.anonymous.jovens.exp.direct",
-  "packagerNgrokUrl": "https://w4-3hg.anonymous.jovens.exp.direct",
-  "ngrokPid": 11152,
+  "expoServerNgrokUrl": "https://r5-nuk.anonymous.jovens.exp.direct",
+  "packagerNgrokUrl": "https://r5-nuk.anonymous.jovens.exp.direct",
+  "ngrokPid": 14636,
   "webpackServerPort": 19006,
   "packagerPid": null,
   "devToolsPort": 19002
