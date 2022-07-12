@@ -6,7 +6,6 @@ export default StyleSheet.create({
     },
    userInfoSection: {
     paddingHorizontal: 30,
-    marginBottom:25,
    },
    title: {
     fontSize: 24, 

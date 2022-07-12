@@ -6,14 +6,7 @@ import Login from './src/components/Login'
 import CadastroUsuarioScreen from './src/components/CadastroUsuario'
 import Home from './src/components/Routes.js/Home'
 import Cadastros from './src/components/Routes.js/Cadastros'
-<<<<<<< HEAD
-// import CadastroEmpresa from './src/components/CadastroEmpresa';
-// import { getPessoa } from '../jovens-server/src/queries';
-// import { Keyboard } from 'react-native';
-
-=======
 import CadastroEmpresa from './src/components/CadastroEmpresa';
->>>>>>> d47d5e8c9ea19ef2b6f4ece004c0e30c3ea648bf
 
 const Stack = createStackNavigator(); 
 

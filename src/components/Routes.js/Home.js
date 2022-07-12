@@ -38,7 +38,7 @@ const Tab = createBottomTabNavigator();
             ),
           }}
         />
-        { <Tab.Screen name="Perfil" component={PerfilUser} options={{ 
+        { <Tab.Screen name="Perfil" component={ProfileStackScreen} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (

@@ -1,19 +1,10 @@
 {
-<<<<<<< HEAD
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19000,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
   "expoServerNgrokUrl": null,
   "packagerNgrokUrl": null,
   "ngrokPid": null,
-=======
-  "expoServerPort": null,
-  "packagerPort": 19000,
-  "expoServerNgrokUrl": "https://w4-3hg.anonymous.jovens.exp.direct",
-  "packagerNgrokUrl": "https://w4-3hg.anonymous.jovens.exp.direct",
-  "ngrokPid": 11152,
->>>>>>> d47d5e8c9ea19ef2b6f4ece004c0e30c3ea648bf
-  "webpackServerPort": 19006,
-  "packagerPid": null,
-  "devToolsPort": 19002
+  "webpackServerPort": null
 }
