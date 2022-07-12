@@ -6,17 +6,11 @@ import Login from './src/components/Login'
 import CadastroUsuarioScreen from './src/components/CadastroUsuario'
 import Home from './src/components/Routes.js/Home'
 import Cadastros from './src/components/Routes.js/Cadastros'
-import CadastroEmpresa from './src/components/CadastroEmpresa';
 
 const Stack = createStackNavigator(); 
 
 
 export default function App() {
-    
-
-    const addUser = () => {
-      getPessoa()
-  }
   return(
     <NavigationContainer>
       <Stack.Navigator initialRouteName='PaginaInicial'>

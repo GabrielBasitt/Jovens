@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View} from 'react-native'
 import styles from '../styles/perfil'
-import {Avatar, Title, Caption, Text, TouchableRipple,} from "react-native-paper"
+import {Avatar, Title, Caption, Text,} from "react-native-paper"
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
 
@@ -41,3 +41,6 @@ const PerfilUser = () => {
   )
 }
 export default PerfilUser;
+ 
+
+
