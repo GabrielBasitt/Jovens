@@ -1,14 +1,19 @@
-import React from 'react'
+import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PostsAdm from '../PostsAdm'
 import Feed from '../Feed'
 import PerfilUser from '../Perfil'
 import Post from '../Post'
 import {MaterialCommunityIcons, Feather} from '@expo/vector-icons';
+import { createStackNavigator } from '@react-navigation/stack';
+import Icon from 'react-native-vector-icons/Ionicons';
 
+
+const ProfileStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-export default function MyTabs() {
-    return (
+
+ const MyTabs = () => (
+    
       <Tab.Navigator initialRouteName='Home' screenOptions={{
         tabBarStyle:{
             backgroundColor: '#fff'
@@ -48,7 +53,53 @@ export default function MyTabs() {
             ),
           }} /> }
       </Tab.Navigator> 
-    );
-  }
+    
+ )
+export default MyTabs;  
+
+const ProfileStackScreen = ({navigation}) => {
+  const {colors} = useTheme();
+
+  return (
+    <ProfileStack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: colors.background,
+          shadowColor: colors.background, // iOS
+          elevation: 0, // Android
+        },
+        headerTintColor: colors.text,
+      }}>
+      <ProfileStack.Screen
+        name="Perfil"
+        component={PerfilUser}
+        options={{
+          title: '',
+          headerLeft: () => (
+            <View style={{marginLeft: 10}}>
+             
+            </View>
+          ),
+          headerRight: () => (
+              <MaterialCommunityIcons.Button
+                name="account-edit"
+                size={25}
+                backgroundColor={colors.background}
+                color={colors.text}
+                onPress={() => navigation.navigate('EditarPerfil')}
+              />
+          ),
+        }}
+      />
+      <ProfileStack.Screen
+        name="EditarPerfil"
+        options={{
+          title: 'Edit Profile',
+        }}
+        component={EditarPerfilScreen}
+      />
+    </ProfileStack.Navigator>
+  );
+};
 
   // options={{headerShown:false}}
