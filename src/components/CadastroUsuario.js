@@ -93,7 +93,7 @@ const cadastroUsuario = () => {
                              onChangeText={handleEmailChange}
                             />
                         <TextInput style={styles.inpSenha}
-                                placeholder="escreva sua senha"
+                                placeholder="Escreva sua senha"
                                 onChangeText={handleSenhaChange}
                             />
                         <TouchableOpacity
