@@ -1,11 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import PostsAdm from '../PostsAdm';
-import Feed from '../Feed';
-import {View} from "react-native"
-import PerfilUser from '../Perfil';
-import {useTheme} from 'react-native-paper';
-import EditarPerfilScreen from "../EditarPerfilScreen";
+import PostsAdm from '../PostsAdm'
+import Feed from '../Feed'
+import PerfilUser from '../Perfil'
+import Post from '../Post'
 import {MaterialCommunityIcons, Feather} from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
