@@ -4,7 +4,7 @@ import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
 export default function Logar({navigation}){
-    return(
+  return( 
 
 
         <KeyboardAvoidingView style={styles.container}>
