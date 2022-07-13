@@ -1,40 +1,37 @@
 import React, { Component } from "react";
 import { View} from 'react-native'
 import styles from '../styles/perfil'
-import {Avatar, Title, Caption, Text, TouchableRipple,} from "react-native-paper"
+import {Avatar, Title, Caption, Text} from "react-native-paper"
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
 
 const PerfilUser = () => {
   return(
-    <SafeAreaView>
+    <SafeAreaView style={{justifyContent: "center", alignItems: "center"}}>
     <View style={styles.container}>
       <View style ={styles.userInfoSection}>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{flexDirection: 'column'}}>
           <Avatar.Image
           source={{
-            uri: 'https://ichigoinu.com/assets/img/ichigo_hero.png' ,}} size={80}/>
-
-        </View>
-        <View style={{marginLeft:20}}>
-        <Title style ={styles.title}>Coe manin</Title>
-        <Caption style ={styles.caption}>@Coe_zé</Caption>
+            uri: 'https://free4kwallpapers.com/uploads/originals/2015/12/09/raiden-metal-gear-rising-revengeance-wallpaper.jpg',}} size={140}/>
         </View>
       </View>
     </View>
+            <Title style ={styles.title}>Coe manin</Title>
+            <Caption style ={styles.caption}>@Coe_zé</Caption> 
+    <View style={styles.userInfoTitles}>
+      <View style={styles.row}>
+        <Icon name="map-marker-radius"  style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
+        <Text style={styles.text}>Florianópolis</Text>
+      </View>
+      <View style={styles.row}>
+        <Icon name="phone" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
+        <Text style={styles.text}>(48) 98483-2311</Text>
 
-    <View style={styles.userInfoSection}>
-      <View style={styles.row}>
-        <Icon name="map-marker-radius"  color ="#777777" size={20} />
-        <Text style={{color:"#777777", marginLeft: 20}}>Rio Verde</Text>
       </View>
       <View style={styles.row}>
-        <Icon name="phone"  color ="#777777" size={20} />
-        <Text style={{color:"#777777", marginLeft: 20}}> (48) 98483-2311</Text>
-      </View>
-      <View style={styles.row}>
-        <Icon name="phone"  color ="#777777" size={20} />
-        <Text style={{color:"#777777", marginLeft: 20}}> 25 anos</Text>
+        <Icon name="account" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
+        <Text style={styles.text}> 25 anos</Text>
       </View>
     </View>
     </SafeAreaView>

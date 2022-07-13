@@ -2,25 +2,52 @@ import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create({
     container:{
-        flex:1
+        flex:1,
+        alignItems:'center',
+        justifyContent:'center'
     },
    userInfoSection: {
-    paddingHorizontal: 30,
+    marginTop:10
    },
    title: {
+    marginTop: 160,
     fontSize: 24, 
     fontWeight:'bold'
    },
    caption: {
-    fontSize: 14,
-    lineHeight:14,
+    fontSize: 16,
+    lineHeight:16,
     fontWeight:'500'
    },
    row: {
     flexDirection: 'row',
-    marginBottom:10
+    marginBottom:10,
+    justifyContent: "center",
+    alignItems: "center"
+   },
+   userInfoTitles: {
+    width: "100%",
+    marginTop:10,
+    justifyContent: "center",
+    alignItems: "center"
+   },
+   text:{
+    width: "100%",
+    height: 40,
+    fontSize: 20,
+    lineHeight:20,
+    color:'#777777',
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    borderLeftColor:"#fff",
+    borderTopColor:"#fff",
+    borderRightColor:"#fff",
+    borderBottomColor: "#808080",
+    paddingLeft: 40,
+    paddingTop: 12,
+    zIndex: 1,
+    right: 5
    }
-   
 
   
 })

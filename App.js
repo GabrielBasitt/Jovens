@@ -18,7 +18,7 @@ export default function App() {
         <Stack.Screen name = "PaginaInicial" component = {PaginaInicial}  options={{headerShown:false}}/>    
         <Stack.Screen name = "Login" component = {Login} /> 
         <Stack.Screen name = "Cadastro" component = {CadastroUsuarioScreen} />
-        <Stack.Screen name = "Home" component = {Home} />
+        <Stack.Screen name = "Home" component = {Home}  options={{headerShown:false}}/>
         <Stack.Screen name = "Cadastros" component = {Cadastros} />
         
       </Stack.Navigator>

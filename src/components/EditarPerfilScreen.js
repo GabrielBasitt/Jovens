@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ImageBackground, TextInput, Button, Image, StyleSheet, Platform } from 'react-native';
-import * as ImagePicker from "expo-image-picker"
+import { View, TouchableOpacity, TextInput, Button, Image, Platform } from 'react-native';
+import { Text} from "react-native-paper";
+import * as ImagePicker from "expo-image-picker";
+import styles from '../styles/editarperfil';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 // import { useTheme } from 'react-native-paper';
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 // import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -42,21 +45,43 @@ const EditarPerfilScreen = () => {
 
   return (
     <View style={styles.container}>
-    <Button title="Choose Image" onPress={PickImage} />
-            {image && <Image source={{uri:image}} style={{
-              width:200,
-              height:200
-            }}/>}
+
+      <TouchableOpacity onPress={PickImage}>
+      <View style={styles.imgContainer}  resizeMode="center">
+      {image && <Image source={{uri:image}} style={styles.imagePress}/>}
+          
+        
+      </View>
+      </TouchableOpacity>
+      <View style={styles.userInfoTitles}>
+      <View style={styles.row}>
+          <Icon name="account-circle" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
+          <TextInput style={styles.text} placeholder="Digite seu Nome"></TextInput>
+        </View>
+        <View style={styles.row}>
+          <Icon name="account-circle" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
+          <TextInput style={styles.text} placeholder="Digite seu Nome"></TextInput>
+        </View>
+        <View style={styles.row}>
+          <Icon name="map-marker-radius" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
+          <TextInput style={styles.text} placeholder="Digite sua cidade"></TextInput>
+        </View>
+        <View style={styles.row}>
+          <Icon name="phone" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
+          <TextInput style={styles.text} placeholder="Digite seu número"></TextInput>
+
+        </View>
+        <View style={styles.row}>
+          <Icon name="account" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
+          <TextInput style={styles.text} placeholder="Digite sua idade"></TextInput>
+        </View>
+      </View>
     </View>
 
-    
+
   );
 };
-const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    alignItems:'center',
-    justifyContent:'center'
-  }
-})
+
 export default EditarPerfilScreen;
+
+// {image && <Image source={{uri:image}} />}
