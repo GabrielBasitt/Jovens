@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, TouchableOpacity, TextInput, Button, Image, Platform } from 'react-native';
-import { Text} from "react-native-paper";
 import * as ImagePicker from "expo-image-picker";
 import styles from '../styles/editarperfil';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-// import { useTheme } from 'react-native-paper';
-// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-// import FontAwesome from 'react-native-vector-icons/FontAwesome';
-// import Feather from 'react-native-vector-icons/Feather';
-// import BottomSheet from 'reanimated-bottom-sheet';
-// import Animated from 'react-native-reanimated';
-// import Constants from 'expo-constants'
 
 const EditarPerfilScreen = () => {
 
@@ -37,11 +29,6 @@ const EditarPerfilScreen = () => {
       setImage(result.uri)
     }
   }
-
-  // const { colors } = useTheme();
-  // bs = React.createRef();
-  // fall = new Animated.Value(1);
-
 
   return (
     <View style={styles.container}>
@@ -83,5 +70,3 @@ const EditarPerfilScreen = () => {
 };
 
 export default EditarPerfilScreen;
-
-// {image && <Image source={{uri:image}} />}

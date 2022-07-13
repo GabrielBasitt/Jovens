@@ -6,7 +6,7 @@ import {useState} from "react";
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 const cadastroEmpresa = () => {
     const [nome_empresa, setNome_empresa] = useState('')
-    const [cnjp, setCnpj] = useState('')
+    const [cnpj, setCnpj] = useState('')
     const [telefone, setTelefone] = useState('')
     const [data_fundacao, setData_fundacao] = useState('')
     const [email, setEmail] = useState('')
@@ -20,7 +20,7 @@ const cadastroEmpresa = () => {
     const handleSenhaChange = senha => SetSenha(senha)
 
     const postEmpresa = async (props) => {  
-    if (nome_empresa && cnjp && telefone && data_fundacao && email && senha != "") {
+    if (nome_empresa && cnpj && telefone && data_fundacao && email && senha != "") {
         try {
             const requestOptions = {
                 method: 'POST',
@@ -28,15 +28,15 @@ const cadastroEmpresa = () => {
                 mode: 'no-cors',
                 body: JSON.stringify({
                     nome_empresa: nome_empresa,
-                    cnjp: cnjp,
+                    cnpj: cnpj,
                     telefone: telefone,
                     data_fundacao: data_fundacao,
                     email: email,
                     senha: senha
                 })
             }
-            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions),
-            props.addEmpresa()
+            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
+            // props.addEmpresa()
 
             //navigation.navigate('Login')
            
@@ -71,32 +71,37 @@ const cadastroEmpresa = () => {
                         value={nome_empresa}
                         placeholder="Escreva o nome da empresa"
                         onChangeText={handleNome_empresaChange}
-                        
+                        autoCorrect={false}
                            />
-                        <TextInput style={styles.inpCPF}
-                             value={cnpj}
+                        <TextInput style={styles.inpCnpj}
+                            value={cnpj}
                             placeholder="Escreva o CNPJ da empresa"
                             onChangeText={handleCnpjChange}
+                            autoCorrect={false}
                             />
                         <TextInput style={styles.inpData}
                             value={data_fundacao}
                             placeholder="Escreva a data de fundação da empresa"
                              onChangeText={handledata_fundacaoChange}
+                             autoCorrect={false}
                             />
                         <TextInput style={styles.inpTelefone}
                             value={telefone}
                             placeholder="Escreva o telefone da empresa"
                               onChangeText={handleTelefoneChange}
+                              autoCorrect={false}
                             />
                         <TextInput style={styles.inpEmail}
                             value={email}
                             placeholder="Escreva o email da empresa"
                              onChangeText={handleEmailChange}
+                             autoCorrect={false}
                             />
                         <TextInput style={styles.inpSenha}
                                 value={senha}
                                 placeholder="escreva uma senha"
                                 onChangeText={handleSenhaChange}
+                                  autoCorrect={false}
                             />
                         <TouchableOpacity
                             style={styles.btnC}

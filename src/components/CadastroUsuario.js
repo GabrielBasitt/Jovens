@@ -22,7 +22,7 @@ const cadastroUsuario = () => {
     const handleEmailChange = email => setEmail(email)
     const handleSenhaChange = senha => SetSenha(senha)
 
-    const postUser = async (props) => {  
+    const postUser = async () => {  
     if (nome_completo && cpf && telefone && data_nascimento && email && senha != "") {
         try {
             const requestOptions = {
@@ -38,9 +38,9 @@ const cadastroUsuario = () => {
                     senha: senha
                 })
             }
-            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions),
-            props.addUser()
-
+            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
+            // props.addUser()
+            console.log(requestOptions)
             //navigation.navigate('Login')
            
         }catch( error){
@@ -70,31 +70,42 @@ const cadastroUsuario = () => {
 
                     <View style={styles.viewInputs}>
                     
-                        <TextInput style={styles.inpName} value={nome_completo}
+                        <TextInput style={styles.inpName} 
+                        value={nome_completo}
                         placeholder="Escreva um nome"
                         onChangeText={handleNome_completoChange}
-                        
+                        autoCorrect={false}
+                    
                            />
                         <TextInput style={styles.inpCPF}
+                            value={cpf}
                             placeholder="Escreva um cpf"
                             onChangeText={handleCpfChange}
+                            autoCorrect={false}
                             />
                         <TextInput style={styles.inpData}
+                            value={data_nascimento}
                             placeholder="Escreva sua data de nascimento"
                              onChangeText={handledata_nascimentoChange}
+                             autoCorrect={false}
                             />
                         <TextInput style={styles.inpTelefone}
-    
+                            value={telefone}
                             placeholder="Escreva seu telefone"
                               onChangeText={handleTelefoneChange}
+                              autoCorrect={false}
                             />
                         <TextInput style={styles.inpEmail}
+                            value={email}
                            placeholder="Escreva um email"
                              onChangeText={handleEmailChange}
+                             autoCorrect={false}
                             />
                         <TextInput style={styles.inpSenha}
-                                placeholder="Escreva sua senha"
+                                value={senha}
+                                placeholder="escreva sua senha"
                                 onChangeText={handleSenhaChange}
+                                autoCorrect={false}
                             />
                         <TouchableOpacity
                             style={styles.btnC}
@@ -110,4 +121,4 @@ const cadastroUsuario = () => {
     )
 
     }
-export default cadastroUsuario 
+export default cadastroUsuario  

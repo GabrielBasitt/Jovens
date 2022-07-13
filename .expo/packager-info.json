@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
   "devToolsPort": 19002,
   "expoServerPort": null,
@@ -12,3 +13,14 @@
 =======
 {}
 >>>>>>> 362034d0fee06bc2b69741f5fdfdafd4ea751a44
+=======
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://r5-nuk.anonymous.jovens.exp.direct",
+  "packagerNgrokUrl": "https://r5-nuk.anonymous.jovens.exp.direct",
+  "ngrokPid": 10268,
+  "webpackServerPort": 19006
+}
+>>>>>>> c03ea4e9658de29776d19bc4af9d527c940f2ab9
