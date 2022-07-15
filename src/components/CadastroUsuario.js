@@ -1,13 +1,11 @@
 import {useState} from "react";
 import { Text, TextInput, View, ImageBackground, KeyboardAvoidingView, TouchableOpacity } from 'react-native'
 import styles from "../styles/cadastrousuario"
-import React from "react";
-
-
-
+import React from "react"
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
 const cadastroUsuario = () => {
+
     const [nome_completo, setNome_completo] = useState('')
     const [cpf, setCpf] = useState('')
     const [telefone, setTelefone] = useState('')
@@ -23,12 +21,13 @@ const cadastroUsuario = () => {
     const handleSenhaChange = senha => SetSenha(senha)
 
     const postUser = async () => {  
+
     if (nome_completo && cpf && telefone && data_nascimento && email && senha != "") {
         try {
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
-                mode: 'no-cors',
+                     mode: 'no-cors',
                 body: JSON.stringify({
                     nome_completo: nome_completo,
                     cpf: cpf,
@@ -39,18 +38,12 @@ const cadastroUsuario = () => {
                 })
             }
             await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
-            // props.addUser()
             console.log(requestOptions)
             //navigation.navigate('Login')
            
         }catch( error){
             console.log(error)
-            setNome_completo('')
-            setCpf('')
-            setTelefone('')
-            setData_nascimento('')
-            setEmail('')
-            SetSenha('')
+            
         }
     }else{
             return(
@@ -73,7 +66,8 @@ const cadastroUsuario = () => {
                         <TextInput style={styles.inpName} 
                         value={nome_completo}
                         placeholder="Escreva um nome"
-                        onChangeText={handleNome_completoChange}
+                         onChangeText={handleNome_completoChange}
+                        //onChangeText={(Text)=> setNome_completo(Text)}
                         autoCorrect={false}
                     
                            />

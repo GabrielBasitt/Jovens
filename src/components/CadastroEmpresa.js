@@ -19,7 +19,7 @@ const cadastroEmpresa = () => {
     const handleEmailChange = email => setEmail(email)
     const handleSenhaChange = senha => SetSenha(senha)
 
-    const postEmpresa = async (props) => {  
+    const postEmpresa = async () => {  
     if (nome_empresa && cnpj && telefone && data_fundacao && email && senha != "") {
         try {
             const requestOptions = {
@@ -35,8 +35,7 @@ const cadastroEmpresa = () => {
                     senha: senha
                 })
             }
-            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
-            // props.addEmpresa()
+            await fetch('https://jovens-db.herokuapp.com/empresa', requestOptions)
 
             //navigation.navigate('Login')
            
