@@ -1,10 +1,28 @@
-import React from "react";
+import React, {useState} from "react";
 import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
-import styles from '../styles/login'
+import styles from '../styles/login' 
+
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
+
+
 export default function Logar({navigation}){
-  return( 
+    const [pessoa, setPessoa] = useState([])
+
+    const getPessoa = async () => {
+        try{
+            const response = await fetch('http://localhost:3000/pessoa')
+            const data = response.json()
+            data.then(
+                (val) => setPessoa(val)
+            )
+            navigation.navigate("Home")
+        }catch(error){
+            console.log(error)
+        }
+   }
+
+    return(
 
 
         <KeyboardAvoidingView style={styles.container}>
@@ -34,7 +52,7 @@ export default function Logar({navigation}){
                     />
                      <TouchableOpacity
                         style={styles.btnL}
-                        onPress={() => navigation.navigate('Home')}>
+                        onPress={getPessoa}>
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
 
