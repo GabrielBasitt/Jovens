@@ -7,7 +7,9 @@ import Post from '../Post'
 import {MaterialCommunityIcons, Feather} from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
-
+import {useTheme} from 'react-native-paper';
+import EditarPerfilScreen from "../EditarPerfilScreen";
+import {View} from "react-native"
 
 const ProfileStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -36,16 +38,7 @@ const Tab = createBottomTabNavigator();
             ),
           }}
         />
-        <Tab.Screen name="Post" component={Post} options={{ 
-          headerShown:false,
-          tabBarShowLabel:false,
-          tabBarIcon: ({ focused}) => (
-            <MaterialCommunityIcons name="plus" color={focused ? '#09b291' : 'black'} size={26} /> 
-
-            ),
-          }}
-        />
-        { <Tab.Screen name="Perfil" component={PerfilUser} options={{ 
+        { <Tab.Screen name="Perfil" component={ProfileStackScreen} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
