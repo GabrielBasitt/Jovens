@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, PanResponder} from 'react-native'
 import styles from '../styles/login' 
 
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
@@ -8,23 +8,35 @@ const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
 export default function Logar({navigation}){
     const [pessoa, setPessoa] = useState([])
-
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const handleEmailChange = email => setEmail(email)
+    const handleSenhaChange = senha => setSenha(senha)
     const getPessoa = async () => {
+        if (email && senha != "") {
         try{
-            const response = await fetch('http://localhost:3000/pessoa')
-            const data = response.json()
-            data.then(
-                (val) => setPessoa(val)
-            )
-            navigation.navigate("Home")
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    senha: senha
+                })
+            }
+            const response = await fetch('http://localhost:3000/login/pessoa', requestOptions)
+            if(response.status === 400){
+            console.log("usuario nao econtrado");
+            }else{
+                const data = await response.json()
+                setPessoa(data)
+                navigation.navigate("Home")
+                }
         }catch(error){
             console.log(error)
-        }
+                }
    }
-
+    }
     return(
-
-
         <KeyboardAvoidingView style={styles.container}>
             <ImageBackground 
         source = {bolaVerde} style={styles.backGround}  >
@@ -38,24 +50,22 @@ export default function Logar({navigation}){
                 </View>
                 <View style ={styles.viewInputs}>
                     <TextInput style = {styles.inpEmail}
-                    placeholder="Insira seu Email..."
-                    autoCorrect={false}
-                    onChange={()=>{}}
-                    
+                    value={email}
+                    placeholder="Insira o seu email"
+                     onChangeText={handleEmailChange}
+                     autoCorrect={false}
                     />
-
                     <TextInput style = {styles.inpSenha}
-                    placeholder="Insira sua senha..." 
+                    value={senha}
+                    placeholder="escreva sua senha"
+                    onChangeText={handleSenhaChange}
                     autoCorrect={false}
-                    onChange={()=>{}}
-                    
                     />
                      <TouchableOpacity
                         style={styles.btnL}
                         onPress={getPessoa}>
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
-
                 </View>
                 </View>
     </ImageBackground>

@@ -2,9 +2,10 @@ import React from "react";
 import { TextInput  , View, ImageBackground, KeyboardAvoidingView, TouchableOpacity, Text } from 'react-native'
 import styles from "../styles/cadastroempresa"
 import {useState} from "react";
-
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
+
 const cadastroEmpresa = () => {
+
     const [nome_empresa, setNome_empresa] = useState('')
     const [cnpj, setCnpj] = useState('')
     const [telefone, setTelefone] = useState('')
@@ -25,7 +26,6 @@ const cadastroEmpresa = () => {
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
-                mode: 'no-cors',
                 body: JSON.stringify({
                     nome_empresa: nome_empresa,
                     cnpj: cnpj,
@@ -35,9 +35,8 @@ const cadastroEmpresa = () => {
                     senha: senha
                 })
             }
-            await fetch('https://jovens-db.herokuapp.com/empresa', requestOptions)
-
-            //navigation.navigate('Login')
+            await fetch('http://localhost:3000/empresa', requestOptions)
+            navigation.navigate('Login')
            
         }catch( error){
             console.log(error)
@@ -56,14 +55,11 @@ const cadastroEmpresa = () => {
             )
         }
     }
-
     return (
         <View style={styles.container}>
             <KeyboardAvoidingView style={styles.container}>
-
                 <ImageBackground
                     source={bolaVerde} style={styles.backGround}  >
-
                     <View style={styles.viewInputs}>
                     
                         <TextInput style={styles.inpName} 
@@ -107,13 +103,9 @@ const cadastroEmpresa = () => {
                             onPress={postEmpresa}>
                             <Text style={styles.cadastrar}>Cadastrar</Text>
                         </TouchableOpacity>
-
                     </View>
                 </ImageBackground>
             </KeyboardAvoidingView>
-
         </View>
-    )
-
-    }
+    )}
 export default cadastroEmpresa

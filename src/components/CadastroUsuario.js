@@ -27,7 +27,6 @@ const cadastroUsuario = () => {
             const requestOptions = {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json' },
-                     mode: 'no-cors',
                 body: JSON.stringify({
                     nome_completo: nome_completo,
                     cpf: cpf,
@@ -37,13 +36,17 @@ const cadastroUsuario = () => {
                     senha: senha
                 })
             }
-            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
-            console.log(requestOptions)
-            //navigation.navigate('Login')
+            await fetch('http://localhost:3000/pessoa', requestOptions)
+            navigation.navigate('Login')
            
         }catch( error){
             console.log(error)
-            
+            setNome_completo('')
+            setCpf('')
+            setTelefone('')
+            setData_nascimento('')
+            setEmail('')
+            SetSenha('')
         }
     }else{
             return(
@@ -67,7 +70,6 @@ const cadastroUsuario = () => {
                         value={nome_completo}
                         placeholder="Escreva um nome"
                          onChangeText={handleNome_completoChange}
-                        //onChangeText={(Text)=> setNome_completo(Text)}
                         autoCorrect={false}
                     
                            />
