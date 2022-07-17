@@ -3,7 +3,7 @@ import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableO
 import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 
-export default function LogarEmpresa(){
+export default function LogarEmpresa({navigation}){
     const [empresa, setEmpresa] = useState([])
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
