@@ -36,7 +36,7 @@ const cadastroUsuario = () => {
                     senha: senha
                 })
             }
-            await fetch('http://localhost:3000/pessoa', requestOptions)
+            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
             navigation.navigate('Login')
            
         }catch( error){

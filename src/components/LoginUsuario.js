@@ -23,7 +23,7 @@ export default function LogarUsuario({navigation}){
                     senha: senha
                 })
             }
-            const response = await fetch('http://localhost:3000/login/pessoa', requestOptions)
+            const response = await fetch('https://jovens-db.herokuapp.com/login/pessoa', requestOptions)
             if(response.status === 400){
             console.log("usuario nao econtrado");
             }else{
