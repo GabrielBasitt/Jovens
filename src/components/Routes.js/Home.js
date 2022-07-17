@@ -1,12 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import PostsAdm from '../PostsAdm'
+import FeedAdm from "../FeedAdm"
 import Feed from '../Feed'
 import PerfilUser from '../Perfil'
 import Post from '../Post'
+import Logins from "../Routes.js/Logins"
 import {MaterialCommunityIcons, Feather} from '@expo/vector-icons';
 import { createStackNavigator } from '@react-navigation/stack';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useTheme} from 'react-native-paper';
 import EditarPerfilScreen from "../EditarPerfilScreen";
 import {View} from "react-native"
@@ -22,7 +23,7 @@ const Tab = createBottomTabNavigator();
           }
       }}
       >
-        <Tab.Screen name="PostsAdm" component={PostsAdm} options={{ 
+        <Tab.Screen name="FeedAdm" component={FeedAdm} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused}) => (
@@ -38,13 +39,21 @@ const Tab = createBottomTabNavigator();
             ),
           }}
         />
-        { <Tab.Screen name="Perfil" component={ProfileStackScreen} options={{ 
+        <Tab.Screen name="Post" component={Post} options={{ 
+          headerShown:false,
+          tabBarShowLabel:false,
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons name="plus" color={focused ? '#09b291' : 'black'} size={26} /> 
+            ),
+          }}
+        />
+         <Tab.Screen name="Perfil" component={ProfileStackScreen} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
             <Feather name="user" color={focused ? '#09b291' : 'black'} size={26} /> 
             ),
-          }} /> }
+          }} /> 
       </Tab.Navigator> 
     
  )
@@ -70,7 +79,13 @@ const ProfileStackScreen = ({navigation}) => {
           title: '',
           headerLeft: () => (
             <View style={{marginLeft: 10}}>
-             
+             <Icon.Button
+                name="account-arrow-left"
+                size={25}
+                backgroundColor={colors.background}
+                color={colors.text}
+                onPress={() => navigation.navigate('Logins')}
+              />
             </View>
           ),
           headerRight: () => (
@@ -85,9 +100,16 @@ const ProfileStackScreen = ({navigation}) => {
         }}
       />
       <ProfileStack.Screen
+        name="Logar"
+        options={{
+          title: 'Login',
+        }}
+        component={Logins}
+      />
+      <ProfileStack.Screen
         name="EditarPerfil"
         options={{
-          title: 'Edit Profile',
+          title: 'Editar Perfil',
         }}
         component={EditarPerfilScreen}
       />

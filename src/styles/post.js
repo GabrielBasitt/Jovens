@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native'
 
 export default StyleSheet.create({
-    container:{
+  container:{
         flex:1,
         justifyContent: 'center',
         alignItems:'center',
@@ -18,8 +18,27 @@ export default StyleSheet.create({
       texto:{
         fontSize:50,
         textAlign:'center',
-        marginTop:110
+        marginTop:90,
+        marginBottom:50
       },
+      imgContainer:{
+        justifyContent:'center',
+        alignItems:'center',
+        height: 220,
+        width: 220,
+        borderRadius:360,
+        borderWidth:1,
+        marginLeft:135,
+        marginBottom:50,
+        borderColor:"#000"
+       },
+       imagePress:{
+        height: 220,
+        width: 220,
+        borderRadius:360,
+        justifyContent:'center',
+        alignItems:'center'
+       },
       frase:{
         fontSize:22,
         textAlign: 'center',
@@ -39,12 +58,12 @@ export default StyleSheet.create({
             height: 40,
             width:350,
             borderRadius: 20,
-            borderColor: '#000',
             backgroundColor:"#fff",
+            borderColor: '#000',
             borderWidth: 2,
             zIndex: 2,
             textAlign:'center',
-            margin: 30
+            margin: 10
         },
         desc:{ 
             height: 40,
@@ -65,7 +84,8 @@ export default StyleSheet.create({
             borderWidth: 2,
             zIndex: 2,
             textAlign:'center',
-            margin: 30
+            margin: 10,
+            marginBottom:30
         },
         btnL:{
             height: 40,

@@ -7,10 +7,11 @@ export default StyleSheet.create({
         justifyContent:'center'
     },
    userInfoSection: {
-    marginTop:10
+    marginTop:10,
+    
    },
    title: {
-    marginTop: 160,
+    marginTop: 10,
     fontSize: 24, 
     fontWeight:'bold'
    },
@@ -27,9 +28,10 @@ export default StyleSheet.create({
    },
    userInfoTitles: {
     width: "100%",
-    marginTop:10,
+    marginTop:30,
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    marginBottom:150
    },
    text:{
     width: "100%",

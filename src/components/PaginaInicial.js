@@ -16,7 +16,7 @@ export default  function PaginaInicial({ navigation}) {
       <Text style={styles.frase}> Pessoas são a esperança </Text>
       <Text style={styles.frase2} >Seja Bem-vindo(a)!</Text>
     
-    <TouchableOpacity style={styles.btnL} onPress={() => navigation.navigate('Login')}>
+    <TouchableOpacity style={styles.btnL} onPress={() => navigation.navigate('Logins')}>
           <Text style={styles.name}>Login</Text> 
     </TouchableOpacity>
     
@@ -28,5 +28,3 @@ export default  function PaginaInicial({ navigation}) {
     </View>
     
   )};
-  
- 

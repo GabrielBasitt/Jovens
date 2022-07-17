@@ -35,7 +35,7 @@ const cadastroEmpresa = () => {
                     senha: senha
                 })
             }
-            await fetch('http://localhost:3000/empresa', requestOptions)
+            await fetch('https://jovens-db.herokuapp.com/empresa', requestOptions)
             navigation.navigate('Login')
            
         }catch( error){
@@ -64,37 +64,37 @@ const cadastroEmpresa = () => {
                     
                         <TextInput style={styles.inpName} 
                         value={nome_empresa}
-                        placeholder="Escreva o nome da empresa"
+                        placeholder="Digite o nome da empresa"
                         onChangeText={handleNome_empresaChange}
                         autoCorrect={false}
                            />
                         <TextInput style={styles.inpCnpj}
                             value={cnpj}
-                            placeholder="Escreva o CNPJ da empresa"
+                            placeholder="Digite o CNPJ da empresa"
                             onChangeText={handleCnpjChange}
                             autoCorrect={false}
                             />
                         <TextInput style={styles.inpData}
                             value={data_fundacao}
-                            placeholder="Escreva a data de fundação da empresa"
+                            placeholder="Digite a data de fundação da empresa"
                              onChangeText={handledata_fundacaoChange}
                              autoCorrect={false}
                             />
                         <TextInput style={styles.inpTelefone}
                             value={telefone}
-                            placeholder="Escreva o telefone da empresa"
+                            placeholder="Digite o telefone da empresa"
                               onChangeText={handleTelefoneChange}
                               autoCorrect={false}
                             />
                         <TextInput style={styles.inpEmail}
                             value={email}
-                            placeholder="Escreva o email da empresa"
+                            placeholder="Digite o email da empresa"
                              onChangeText={handleEmailChange}
                              autoCorrect={false}
                             />
                         <TextInput style={styles.inpSenha}
                                 value={senha}
-                                placeholder="escreva uma senha"
+                                placeholder="Digite uma senha"
                                 onChangeText={handleSenhaChange}
                                   autoCorrect={false}
                             />
