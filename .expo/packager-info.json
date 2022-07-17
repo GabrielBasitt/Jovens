@@ -1,5 +1,6 @@
 {
   "devToolsPort": 19002,
+<<<<<<< HEAD
   "expoServerPort": 19000,
   "packagerPort": 19000,
   "expoServerNgrokUrl": "https://3d-cqg.anonymous.jovens.exp.direct",
@@ -7,4 +8,13 @@
   "ngrokPid": 2860,
   "webpackServerPort": null,
   "packagerPid": null
+=======
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
+>>>>>>> 6f19b0575c7440521d6a4128348d68cc29b1ff1c
 }

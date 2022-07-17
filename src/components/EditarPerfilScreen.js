@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, TouchableOpacity, TextInput, Button, Image, Platform, KeyboardAvoidingView} from 'react-native';
+import { View, TouchableOpacity, TextInput, Image, Platform } from 'react-native';
 import * as ImagePicker from "expo-image-picker";
 import styles from '../styles/editarperfil';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';

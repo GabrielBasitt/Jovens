@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, ScrollView} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
 import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 
-export default function LogarEmpresa({navigation}){
+export default function LogarEmpresa(){
     const [empresa, setEmpresa] = useState([])
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
@@ -20,7 +20,7 @@ export default function LogarEmpresa({navigation}){
                     senha: senha
                 })
             }
-            const response = await fetch('http://localhost:3000/login/empresa', requestOptions)
+            const response = await fetch('https://jovens-db.herokuapp.com/login/empresa', requestOptions)
             if(response.status === 400){
             console.log("usuario nao econtrado");
             }else{

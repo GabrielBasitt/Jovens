@@ -54,7 +54,7 @@ const cadastroPostagem = () => {
                     descricao: descricao
                 })
             }
-            await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
+            await fetch('https://jovens-db.herokuapp.com/postagem', requestOptions)
            navigation.navigate('home')
            
         }catch( error){
