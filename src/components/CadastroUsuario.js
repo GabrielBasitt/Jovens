@@ -37,7 +37,7 @@ const cadastroUsuario = () => {
                 })
             }
             await fetch('http://localhost:3000/pessoa', requestOptions)
-            navigation.navigate('Logins')
+            navigation.navigate('Login')
            
         }catch( error){
             console.log(error)

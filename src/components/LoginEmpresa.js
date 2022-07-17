@@ -4,9 +4,34 @@ import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
 export default function LogarEmpresa({navigation}){
-  return( 
-
-
+    const [empresa, setEmpresa] = useState([])
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const handleEmailChange = email => setEmail(email)
+    const handleSenhaChange = senha => setSenha(senha)
+    const getEmpresa = async () => {
+        if (email && senha != "") {
+        try{
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    senha: senha
+                })
+            }
+            const response = await fetch('http://localhost:3000/login/empresa', requestOptions)
+            if(response.status === 400){
+            console.log("usuario nao econtrado");
+            }else{
+                const data = await response.json()
+                setEmpresa(data)
+                navigation.navigate("Home")
+                }
+        }catch(error){
+            console.log(error)
+                }}}
+    return(
         <KeyboardAvoidingView style={styles.container}>
             <ImageBackground 
         source = {bolaVerde} style={styles.backGround}  >
@@ -20,24 +45,22 @@ export default function LogarEmpresa({navigation}){
                 </View>
                 <View style ={styles.viewInputs}>
                     <TextInput style = {styles.inpEmail}
-                    placeholder="Insira seu Email..."
-                    autoCorrect={false}
-                    onChange={()=>{}}
-                    
+                    value={email}
+                    placeholder="Insira o seu email"
+                     onChangeText={handleEmailChange}
+                     autoCorrect={false}
                     />
-
                     <TextInput style = {styles.inpSenha}
-                    placeholder="Insira sua senha..." 
+                    value={senha}
+                    placeholder="escreva sua senha"
+                    onChangeText={handleSenhaChange}
                     autoCorrect={false}
-                    onChange={()=>{}}
-                    
                     />
                      <TouchableOpacity
                         style={styles.btnL}
-                        onPress={() => navigation.navigate('Home')}>
+                        onPress={getEmpresa}>
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
-
                 </View>
                 </View>
     </ImageBackground>
