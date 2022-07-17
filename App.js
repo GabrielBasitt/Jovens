@@ -7,6 +7,8 @@ import CadastroUsuarioScreen from './src/components/CadastroUsuario'
 import Home from './src/components/Routes.js/Home'
 import Cadastros from './src/components/Routes.js/Cadastros'
 
+
+
 const Stack = createStackNavigator(); 
 
 
