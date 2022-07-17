@@ -5,7 +5,51 @@ import styles from '../styles/editarperfil';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const EditarPerfilScreen = () => {
+    const [nome_perfil, setNome_perfil] = useState('')
+    const [cidade, setCidade] = useState('')
+    const [telefone, setTelefone] = useState('')
+    const [nome_usuario, setNome_usuario] = useState('')
+    const [idade, setIdade] = useState('')
 
+    const handleNome_perfilChange = nome_perfil => setNome_perfil(nome_perfil)
+    const handleCidadeChange = cidade => setCidade(cidade)
+    const handleTelefoneChange = telefone => setTelefone(telefone)
+    const handleNome_usuarioChange = nome_usuario => setNome_usuario(nome_usuario)
+    const handleIdadeChange = idade => setIdade(idade)
+
+    const postPerfil = async () => {  
+      if (nome_perfil && cidade && telefone && nome_usuario && idade != "") {
+          try {
+              const requestOptions = {
+                  method: 'POST',
+                  headers: { 'Content-type': 'application/json' },
+                  body: JSON.stringify({
+                      nome_perfil: nome_perfil,
+                      cidade: cidade,
+                      telefone: telefone,
+                      nome_usuario: nome_usuario,
+                      idade: idade,
+                  })
+              }
+              await fetch('https://jovens-db.herokuapp.com/perfil', requestOptions)
+              navigation.navigate('perfil')
+             
+          }catch( error){
+              console.log(error)
+              setNome_perfil('')
+              setCidade('')
+              setTelefone('')
+              setNome_usuario('')
+              setIdade('')
+          }
+      }else{
+              return(
+              <View>
+                  <Text>Preencha o campo em branco</Text>
+              </View>
+              )
+          }
+      }
   const [image, setImage] = useState(null);
 
   useEffect(() => {
@@ -30,7 +74,6 @@ const EditarPerfilScreen = () => {
       setImage(result.uri)
     }
   }
-
   return (
     <KeyboardAvoidingView behavior={Platform.OS =="android" ? "padding": "height"} style={styles.container}>
     
