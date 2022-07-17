@@ -63,7 +63,8 @@ export default function LogarUsuario({navigation}){
                     />
                      <TouchableOpacity
                         style={styles.btnL}
-                        onPress={getPessoa}>
+                        onPress={() =>navigation.navigate('Home')}>
+                            {/* onPress={getPessoa}> */}
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
                 </View>

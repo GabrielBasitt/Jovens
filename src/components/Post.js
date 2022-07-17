@@ -73,10 +73,10 @@ const cadastroPostagem = () => {
     }
 
     return (
-            <KeyboardAvoidingView behavior={Platform.OS =="ios" ? "padding": "height"} style={styles.container}>
+            <View style={styles.container}>
             <ImageBackground 
                 source = {bolaVerde} style={styles.backGround}  >
-                <View>
+                <KeyboardAvoidingView behavior={Platform.OS =="android" ? "padding": "height"}>
                 <Text style={styles.texto}> Novo post </Text>
                 <TouchableOpacity onPress={PickImage}>
                 <View style={styles.imgContainer}  resizeMode="center">
@@ -108,9 +108,9 @@ const cadastroPostagem = () => {
                         <Text style={styles.name}>Postar</Text> 
                         </TouchableOpacity>
                 
-            </View>
-            </View>
+                </View>
+                </KeyboardAvoidingView>
                 </ImageBackground>
-            </KeyboardAvoidingView>
+                </View>
     )}
 export default cadastroPostagem

@@ -36,7 +36,7 @@ const cadastroEmpresa = () => {
                 })
             }
             await fetch('http://localhost:3000/empresa', requestOptions)
-            navigation.navigate('Login')
+            navigation.navigate('Logins')
            
         }catch( error){
             console.log(error)
@@ -56,12 +56,11 @@ const cadastroEmpresa = () => {
         }
     }
     return (
-        <View style={styles.container}>
-            <KeyboardAvoidingView style={styles.container}>
+        <View  style={styles.container}>
+            <View style={styles.container}>
                 <ImageBackground
                     source={bolaVerde} style={styles.backGround}  >
-                    <View style={styles.viewInputs}>
-                    
+                    <KeyboardAvoidingView behavior={Platform.OS =="android" ? "position": "height" } style={styles.viewInputs}>
                         <TextInput style={styles.inpName} 
                         value={nome_empresa}
                         placeholder="Digite o nome da empresa"
@@ -103,9 +102,9 @@ const cadastroEmpresa = () => {
                             onPress={postEmpresa}>
                             <Text style={styles.cadastrar}>Cadastrar</Text>
                         </TouchableOpacity>
-                    </View>
+                    </KeyboardAvoidingView>
                 </ImageBackground>
-            </KeyboardAvoidingView>
+            </View>
         </View>
     )}
 export default cadastroEmpresa

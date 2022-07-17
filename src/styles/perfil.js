@@ -11,7 +11,7 @@ export default StyleSheet.create({
     
    },
    title: {
-    marginTop: 10,
+    marginTop: 160,
     fontSize: 24, 
     fontWeight:'bold'
    },

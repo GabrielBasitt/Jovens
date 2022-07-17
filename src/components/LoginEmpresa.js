@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
 import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
@@ -32,10 +32,10 @@ export default function LogarEmpresa({navigation}){
             console.log(error)
                 }}}
     return(
-        <KeyboardAvoidingView style={styles.container}>
+        <View style={styles.container}>
             <ImageBackground 
         source = {bolaVerde} style={styles.backGround}  >
-            <View>
+            <KeyboardAvoidingView behavior="padding">
 
                 <View>
                     <Text style= {styles.textlogin}>Login</Text>
@@ -46,13 +46,13 @@ export default function LogarEmpresa({navigation}){
                 <View style ={styles.viewInputs}>
                     <TextInput style = {styles.inpEmail}
                     value={email}
-                    placeholder="Insira o seu email"
+                    placeholder="Digite seu email "
                      onChangeText={handleEmailChange}
                      autoCorrect={false}
                     />
                     <TextInput style = {styles.inpSenha}
                     value={senha}
-                    placeholder="escreva sua senha"
+                    placeholder="Digite sua senha"
                     onChangeText={handleSenhaChange}
                     autoCorrect={false}
                     />
@@ -62,8 +62,8 @@ export default function LogarEmpresa({navigation}){
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
                 </View>
-                </View>
+                </KeyboardAvoidingView>
     </ImageBackground>
-</KeyboardAvoidingView>
+</View>
     );
     }

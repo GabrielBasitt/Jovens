@@ -14,6 +14,8 @@ export default StyleSheet.create({
         width: "100%",
         alignItems:"center",
         zIndex: 1
+        
+        
       },
       textlogin:{
         fontSize:50,

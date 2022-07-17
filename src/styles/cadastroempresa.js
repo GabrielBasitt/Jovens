@@ -99,7 +99,8 @@ viewInputs:{
       justifyContent:'center',
       zIndex: 2,
       marginBottom:10,
-      margin:30
+      margin:30,
+      alignSelf:"center"
   },
 cadastrar:{
     color:'#fff'

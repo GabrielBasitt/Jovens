@@ -59,19 +59,15 @@ const cadastroUsuario = () => {
 
     return (
         <View style={styles.container}>
-            <KeyboardAvoidingView style={styles.container}>
-
+            <View  style={styles.container}>
                 <ImageBackground
                     source={bolaVerde} style={styles.backGround}  >
-
-                    <View style={styles.viewInputs}>
-                    
+                    <KeyboardAvoidingView behavior={Platform.OS =="android" ? "padding": "height"} style={styles.viewInputs}>
                         <TextInput style={styles.inpName} 
                         value={nome_completo}
                         placeholder="Digite seu nome"
                         onChangeText={handleNome_completoChange}
                         autoCorrect={false}
-                    
                            />
                         <TextInput style={styles.inpCPF}
                             value={cpf}
@@ -108,13 +104,9 @@ const cadastroUsuario = () => {
                             onPress={postUser}>
                             <Text style={styles.cadastrar}>Cadastrar</Text>
                         </TouchableOpacity>
-
-                    </View>
+                        </KeyboardAvoidingView>
                 </ImageBackground>
-            </KeyboardAvoidingView>
-
+            </View>
         </View>
-    )
-
-    }
+    )}
 export default cadastroUsuario
