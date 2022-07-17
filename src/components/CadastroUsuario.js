@@ -37,7 +37,7 @@ const cadastroUsuario = () => {
                 })
             }
             await fetch('http://localhost:3000/pessoa', requestOptions)
-            navigation.navigate('Login')
+            navigation.navigate('Logins')
            
         }catch( error){
             console.log(error)
@@ -68,38 +68,38 @@ const cadastroUsuario = () => {
                     
                         <TextInput style={styles.inpName} 
                         value={nome_completo}
-                        placeholder="Escreva um nome"
-                         onChangeText={handleNome_completoChange}
+                        placeholder="Digite seu nome"
+                        onChangeText={handleNome_completoChange}
                         autoCorrect={false}
                     
                            />
                         <TextInput style={styles.inpCPF}
                             value={cpf}
-                            placeholder="Escreva um cpf"
+                            placeholder="Digite seu cpf"
                             onChangeText={handleCpfChange}
                             autoCorrect={false}
                             />
                         <TextInput style={styles.inpData}
                             value={data_nascimento}
-                            placeholder="Escreva sua data de nascimento"
+                            placeholder="Digite sua data de nascimento"
                              onChangeText={handledata_nascimentoChange}
                              autoCorrect={false}
                             />
                         <TextInput style={styles.inpTelefone}
                             value={telefone}
-                            placeholder="Escreva seu telefone"
+                            placeholder="Digite seu telefone"
                               onChangeText={handleTelefoneChange}
                               autoCorrect={false}
                             />
                         <TextInput style={styles.inpEmail}
                             value={email}
-                           placeholder="Escreva um email"
+                           placeholder="Digite um email"
                              onChangeText={handleEmailChange}
                              autoCorrect={false}
                             />
                         <TextInput style={styles.inpSenha}
                                 value={senha}
-                                placeholder="escreva sua senha"
+                                placeholder="Digite sua senha"
                                 onChangeText={handleSenhaChange}
                                 autoCorrect={false}
                             />
@@ -117,4 +117,4 @@ const cadastroUsuario = () => {
     )
 
     }
-export default cadastroUsuario  
+export default cadastroUsuario

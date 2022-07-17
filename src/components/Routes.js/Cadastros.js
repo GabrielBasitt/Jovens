@@ -8,9 +8,9 @@ const Tab = createMaterialTopTabNavigator();
 
 export default function MyTabs() {
   return (
-    <Tab.Navigator initialRouteName='CadastroUsuario' >
-        <Tab.Screen name="CadastroUsuario" component={CadastroUsuarioScreen} />
-        <Tab.Screen name="CadastroEmpresa" component={CadastroEmpresaScreen}  />
+    <Tab.Navigator initialRouteName='Cadastro Usuario' >
+        <Tab.Screen name="Cadastro Usuario" component={CadastroUsuarioScreen} />
+        <Tab.Screen name="Cadastro Empresa" component={CadastroEmpresaScreen}  />
     </Tab.Navigator>
   );
 }
