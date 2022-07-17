@@ -10,6 +10,7 @@ import Cadastros from './src/components/Routes.js/Cadastros'
 
 
 
+
 const Stack = createStackNavigator(); 
 
 
