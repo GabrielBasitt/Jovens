@@ -83,7 +83,7 @@ const cadastroUsuario = () => {
                             />
                         <TextInput style={styles.inpTelefone}
                             value={telefone}
-                            placeholder="Digite seu telefone"
+                            placeholder="Digite seu telefone após inserir 'https://wa.me/' "
                               onChangeText={handleTelefoneChange}
                               autoCorrect={false}
                             />

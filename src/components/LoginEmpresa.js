@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, ScrollView} from 'react-native'
 import styles from '../styles/login'
-const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
+const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 
 export default function LogarEmpresa({navigation}){
     const [empresa, setEmpresa] = useState([])
@@ -34,8 +34,8 @@ export default function LogarEmpresa({navigation}){
     return(
         <View style={styles.container}>
             <ImageBackground 
-        source = {bolaVerde} style={styles.backGround}  >
-            <KeyboardAvoidingView behavior="padding">
+                source = {bolaVerde} style={styles.backGround}  >
+            <KeyboardAvoidingView  behavior={Platform.OS =="android" ? "padding": "height"}>
 
                 <View>
                     <Text style= {styles.textlogin}>Login</Text>
@@ -64,6 +64,6 @@ export default function LogarEmpresa({navigation}){
                 </View>
                 </KeyboardAvoidingView>
     </ImageBackground>
+
 </View>
-    );
-    }
+    )}

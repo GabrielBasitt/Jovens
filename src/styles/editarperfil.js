@@ -60,6 +60,21 @@ export default StyleSheet.create({
       width: 220,
       borderRadius:500,
       
-     }
+     },
+     btnE:{
+        height: 40,
+        width:200,
+        borderRadius: 20,
+        backgroundColor:'#000000',
+        alignItems: 'center',
+        justifyContent:'center',
+        zIndex: 2,
+        marginBottom:10,
+        margin:30,
+        alignSelf:"center"
+    },
+    editar:{
+        color:'#fff'
+      }
     
     });

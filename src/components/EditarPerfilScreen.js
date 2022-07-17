@@ -59,6 +59,11 @@ const EditarPerfilScreen = () => {
         <View style={styles.row}>
           <Icon name="account" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
           <TextInput style={styles.text} placeholder="Digite sua idade"></TextInput>
+          <TouchableOpacity
+                            style={styles.btnE}
+                            onPress={postPerfil}>
+                            <Text style={styles.editar}>Editar</Text>
+                        </TouchableOpacity>
         </View>
       </View>
       

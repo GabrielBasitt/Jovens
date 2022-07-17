@@ -26,7 +26,7 @@ const PerfilUser = () => {
       </View>
       <View style={styles.row}>
         <Icon name="phone" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
-        <Text style={styles.text}>(48) 98483-2311</Text>
+        <Text style={styles.text}> https://wa.me/554888520572</Text>
 
       </View>
       <View style={styles.row}>

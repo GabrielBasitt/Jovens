@@ -21,8 +21,8 @@ export default function App() {
         <Stack.Screen name = "Cadastro" component = {CadastroUsuarioScreen} />
         <Stack.Screen name = "Home" component = {Home}  options={{headerShown:false,tabBarShowLabel:false }}/>
         <Stack.Screen name = "Cadastros" component = {Cadastros} />
-        
       </Stack.Navigator>
-      
     </NavigationContainer>
+
+   
   )}

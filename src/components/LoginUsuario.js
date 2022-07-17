@@ -37,7 +37,8 @@ export default function LogarUsuario({navigation}){
    }
     }
     return(
-        <KeyboardAvoidingView style={styles.container}>
+              
+            <KeyboardAvoidingView style={styles.container}>
             <ImageBackground 
         source = {bolaVerde} style={styles.backGround}  >
             <View>
@@ -48,6 +49,7 @@ export default function LogarUsuario({navigation}){
                 <View>
                     <Text  style={styles.frase}>Informe seu usuário e senha!</Text>
                 </View>
+                
                 <View style ={styles.viewInputs}>
                     <TextInput style = {styles.inpEmail}
                     value={email}
@@ -63,13 +65,13 @@ export default function LogarUsuario({navigation}){
                     />
                      <TouchableOpacity
                         style={styles.btnL}
-                        onPress={() =>navigation.navigate('Home')}>
-                            {/* onPress={getPessoa}> */}
+                        onPress={getPessoa}> 
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
                 </View>
                 </View>
     </ImageBackground>
 </KeyboardAvoidingView>
-    );
-    }
+
+
+    )}

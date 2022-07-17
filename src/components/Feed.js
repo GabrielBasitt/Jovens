@@ -34,7 +34,7 @@ export default function Feed(){
    
   
 const Item = ({image, descricao, clienteId, title }) => (
-<View>
+<View >
 <Text>{clienteId}</Text>
 <Text style={styles.title}>{title} </Text>
 
