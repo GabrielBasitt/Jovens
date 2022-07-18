@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, Platform} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, Platform, Alert} from 'react-native'
 import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 
@@ -22,7 +22,7 @@ export default function LogarEmpresa({navigation}){
             }
             const response = await fetch('https://jovens-db.herokuapp.com/login/empresa', requestOptions)
             if(response.status === 400){
-            console.log("usuario nao econtrado");
+                Alert.alert("Erro!","Usuário não encontrado");
             }else{
                 const data = await response.json()
                 setEmpresa(data)

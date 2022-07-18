@@ -49,7 +49,6 @@ export default StyleSheet.create({
     paddingTop: 12,
     zIndex: 1,
     right: 5
-   }
-
+   },
   
 })

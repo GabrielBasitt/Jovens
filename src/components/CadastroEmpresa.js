@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput  , View, ImageBackground, KeyboardAvoidingView, TouchableOpacity, Text, Platform } from 'react-native'
+import { TextInput  , View, ImageBackground, KeyboardAvoidingView, TouchableOpacity, Text, Platform, Alert } from 'react-native'
 import styles from "../styles/cadastroempresa"
 import {useState} from "react";
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
@@ -48,11 +48,7 @@ const Cadastroempresa = ({navigation}) => {
             SetSenha('')
         }
     }else{
-            return(
-            <View>
-                <Text>Preencha o campo em branco</Text>
-            </View>
-            )
+        Alert.alert("Erro!","Não foi possivel efetuar o cadastro!");
         }
     }
     return (

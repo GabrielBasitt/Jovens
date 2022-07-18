@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, TouchableOpacity, TextInput, Image, Platform, KeyboardAvoidingView, Text } from 'react-native';
+import { View, TouchableOpacity, TextInput, Image, Platform, KeyboardAvoidingView, Text, Alert } from 'react-native';
 import * as ImagePicker from "expo-image-picker";
 import styles from '../styles/editarperfil';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -17,7 +17,7 @@ const EditarPerfilScreen = ({navigation}) => {
     const handleNome_usuarioChange = nome_usuario => setNome_usuario(nome_usuario)
     const handleIdadeChange = idade => setIdade(idade)
 
-    const postPerfil = async ({navigation}) => {  
+    const postPerfil = async () => {  
       if (nome_perfil && cidade && telefone && nome_usuario && idade != "") {
           try {
               const requestOptions = {
@@ -32,8 +32,8 @@ const EditarPerfilScreen = ({navigation}) => {
                   })
               }
               await fetch('https://jovens-db.herokuapp.com/perfil', requestOptions)
-              navigation.navigate('PerfilNavigation')
-             
+              navigation.navigate('Perfil')
+              console.log(requestOptions);
           }catch( error){
               console.log(error)
               setNome_perfil('')
@@ -43,11 +43,7 @@ const EditarPerfilScreen = ({navigation}) => {
               setIdade('')
           }
       }else{
-              return(
-              <View>
-                  <Text>Preencha o campo em branco</Text>
-              </View>
-              )
+              Alert.alert("Não foi possível editar o Perfil")
           }
       }
   const [image, setImage] = useState(null);
@@ -115,7 +111,7 @@ const EditarPerfilScreen = ({navigation}) => {
           <Icon name="phone" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
           <TextInput style={styles.text} 
             value={telefone}
-          placeholder="Digite seu número após inserir https://wa.me/"
+          placeholder="Digite seu número"
           onChangeText={handleTelefoneChange}
           autoCorrect={false}>
           </TextInput>

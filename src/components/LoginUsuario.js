@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, PanResponder, Platform} from 'react-native'
+import {Alert,Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, PanResponder, Platform} from 'react-native'
 import styles from '../styles/login' 
 
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
@@ -22,7 +22,7 @@ export default function LogarUsuario({navigation}){
             }
             const response = await fetch('https://jovens-db.herokuapp.com/login/pessoa', requestOptions)
             if(response.status === 400){
-            console.log("usuario nao econtrado");
+            Alert.alert("Erro!","Usuário não encontrado");
             }else{
                 const data = await response.json()
                 setPessoa(data)

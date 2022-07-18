@@ -6,7 +6,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
 
 
-const supportedURL = "https://wa.me/554888520572";
+const supportedURL = "https://wa.me/554898222471";
+
 const OpenURLButton = ({ url, children }) => {
   const handlePress = useCallback(async () => {
     const supported = await Linking.canOpenURL(url);
@@ -34,6 +35,7 @@ const PerfilUser = () => {
             }else{
                 const data = await response.json()
                 setPerfil(data)
+                console.log(data);
                 }
         }catch(error){
             console.log(error)
@@ -50,7 +52,7 @@ const PerfilUser = () => {
           <View style={{flexDirection: 'column'}}>
             <Avatar.Image
             source={{
-              uri: 'https://free4kwallpapers.com/uploads/originals/2015/12/09/raiden-metal-gear-rising-revengeance-wallpaper.jpg',}} size={140}/>
+              uri: 'https://hypescience.com/wp-content/uploads/2010/03/feliz.jpg',}} size={140}/>
           </View>
         </View>
       </View>
@@ -61,19 +63,20 @@ const PerfilUser = () => {
               >{perfil.nome_usuario}</Caption> 
       <View style={styles.userInfoTitles}>
         <View style={styles.row}>
+        <Icon name="map-marker-radius"  style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
           <Text style={styles.text}
           autoCorrect={false}
           >{perfil.cidade}</Text>
-        </View>
-        <View style={styles.row}>
-          <Icon name="phone" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
-          <OpenURLButton  style={styles.text} url={supportedURL}>{`https://wa.me/${perfil.telefone}`}</OpenURLButton>
         </View>
         <View style={styles.row}>
           <Icon name="account" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
           <Text style={styles.text}
           autoCorrect={false}
           >{perfil.idade}</Text>
+        </View>
+        <View style={styles.row}>
+          <OpenURLButton placeholder="Entrar em contato" url={supportedURL}>
+            Entrar em contato</OpenURLButton>
         </View>
       </View>
       </SafeAreaView>

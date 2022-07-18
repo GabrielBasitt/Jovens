@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { Text, TextInput, View, ImageBackground, KeyboardAvoidingView, TouchableOpacity, Platform } from 'react-native'
+import { Text, TextInput, View, ImageBackground, KeyboardAvoidingView, TouchableOpacity, Platform, Alert } from 'react-native'
 import styles from "../styles/cadastrousuario"
 import React from "react"
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
@@ -20,7 +20,7 @@ const Cadastrousuario = ({navigation}) => {
     const handleEmailChange = email => setEmail(email)
     const handleSenhaChange = senha => SetSenha(senha)
 
-    const postUser = async ({navigation}) => {  
+    const postUser = async () => {  
 
     if (nome_completo && cpf && telefone && data_nascimento && email && senha != "") {
         try {
@@ -49,11 +49,8 @@ const Cadastrousuario = ({navigation}) => {
             SetSenha('')
         }
     }else{
-            return(
-            <View>
-                <Text>Preencha o campo em branco</Text>
-            </View>
-            )
+        Alert.alert("Erro!","Não foi possivel efetuar o cadastro!");
+
         }
     }
 
@@ -65,7 +62,7 @@ const Cadastrousuario = ({navigation}) => {
                     <KeyboardAvoidingView behavior={Platform.OS =="android" ? "position": "height" } style={styles.viewInputs}>
                         <TextInput style={styles.inpName} 
                         value={nome_completo}
-                        placeholder="Digite o nome da empresa"
+                        placeholder="Digite seu nome"
                         onChangeText={handleNome_completoChange}
                         autoCorrect={false}
                            />

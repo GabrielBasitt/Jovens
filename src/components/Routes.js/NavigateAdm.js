@@ -7,7 +7,7 @@ const Drawer = createDrawerNavigator()
 
 const FeedAdmStack = () => {
     return(
-        <Drawer.Navigator screenOptions= {{headerShow:false}}>
+        <Drawer.Navigator initialRouteName='Feed Adm' screenOptions= {{headerShow:false}}>
             <Drawer.Screen name="Post Adm" component={PostAdmScreen}/>
             <Drawer.Screen name="Feed Adm" component={FeedAdmScreen}/>
         </Drawer.Navigator>
