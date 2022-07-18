@@ -5,7 +5,7 @@ import * as ImagePicker from "expo-image-picker";
 
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
-const cadastroPostagemAdm = () => {
+const Cadastropostagemadm = () => {
     
     const [image, setImage] = useState(null);
 
@@ -77,7 +77,7 @@ const cadastroPostagemAdm = () => {
             <ImageBackground 
                 source = {bolaVerde} style={styles.backGround}  >
                 <KeyboardAvoidingView behavior={Platform.OS =="android" ? "padding": "height"}>
-                <Text style={styles.texto}> Novo post </Text>
+                <Text style={styles.texto}> Novo post Adm </Text>
                 <TouchableOpacity onPress={PickImage}>
                 <View style={styles.imgContainer}  resizeMode="center">
                 {image && <Image source={{uri:image}} style={styles.imagePress}/>}
@@ -96,12 +96,7 @@ const cadastroPostagemAdm = () => {
                     value={descricao}
                     onChangeText={handleDescricaoChange}                    
                     />
-                    <TextInput style = {styles.link}
-                    placeholder="Número para entrar em contato" 
-                    autoCorrect={false}
-                    value={foto}
-                    onChangeText={handleFotoChange}
-                    />
+                    
                      <TouchableOpacity
                         style={styles.btnL}
                         onPress={postPost}>
@@ -113,4 +108,4 @@ const cadastroPostagemAdm = () => {
                 </ImageBackground>
                 </View>
     )}
-export default cadastroPostagemAdm
+export default Cadastropostagemadm

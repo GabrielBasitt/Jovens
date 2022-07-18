@@ -11,19 +11,19 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useTheme} from 'react-native-paper';
 import EditarPerfilScreen from "../EditarPerfilScreen";
 import {View} from "react-native"
-
+import FeedAdmStack from "./NavigateAdm"
 const ProfileStack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
  const MyTabs = () => (
     
-      <Tab.Navigator initialRouteName='Home' screenOptions={{
+      <Tab.Navigator initialRouteName='Feed' screenOptions={{
         tabBarStyle:{
             backgroundColor: '#fff'
           }
       }}
       >
-        <Tab.Screen name="FeedAdm" component={FeedAdm} options={{ 
+        <Tab.Screen name="FeedAdmNavigation" component={FeedAdmStack} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused}) => (
@@ -31,7 +31,7 @@ const Tab = createBottomTabNavigator();
             ),
           }}
         />
-        <Tab.Screen name="Home" component={Feed} options={{ 
+        <Tab.Screen name="Feed" component={Feed} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (
@@ -47,7 +47,7 @@ const Tab = createBottomTabNavigator();
             ),
           }}
         />
-         <Tab.Screen name="Perfil" component={ProfileStackScreen} options={{ 
+         <Tab.Screen name="PerfilNavigation" component={ProfileStackScreen} options={{ 
           headerShown:false,
           tabBarShowLabel:false,
           tabBarIcon: ({ focused }) => (

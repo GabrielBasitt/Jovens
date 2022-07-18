@@ -58,7 +58,7 @@ const data = [
     
      
 ]
-export default function Feed(){
+export default function FeedAdm(){
    
   
 const Item = ({image, descricao,  title, icon, nome }) => (

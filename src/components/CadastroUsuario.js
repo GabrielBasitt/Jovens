@@ -4,7 +4,7 @@ import styles from "../styles/cadastrousuario"
 import React from "react"
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
-const cadastroUsuario = () => {
+const Cadastrousuario = () => {
 
     const [nome_completo, setNome_completo] = useState('')
     const [cpf, setCpf] = useState('')
@@ -37,7 +37,7 @@ const cadastroUsuario = () => {
                 })
             }
             await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
-            navigation.navigate('Login')
+            navigation.navigate('Logins')
            
         }catch( error){
             console.log(error)
@@ -109,4 +109,4 @@ const cadastroUsuario = () => {
             </View>
         </View>
     )}
-export default cadastroUsuario
+export default Cadastrousuario

@@ -4,7 +4,7 @@ import styles from "../styles/cadastroempresa"
 import {useState} from "react";
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 
-const cadastroEmpresa = () => {
+const Cadastroempresa = () => {
 
     const [nome_empresa, setNome_empresa] = useState('')
     const [cnpj, setCnpj] = useState('')
@@ -36,7 +36,7 @@ const cadastroEmpresa = () => {
                 })
             }
             await fetch('https://jovens-db.herokuapp.com/empresa', requestOptions)
-            navigation.navigate('Login')
+            navigation.navigate('Logins')
            
         }catch( error){
             console.log(error)
@@ -107,4 +107,4 @@ const cadastroEmpresa = () => {
             </View>
         </View>
     )}
-export default cadastroEmpresa
+export default Cadastroempresa

@@ -36,7 +36,8 @@ export default function LogarEmpresa({navigation}){
         <View style={styles.container}>
             <ImageBackground 
                 source = {bolaVerde} style={styles.backGround}  >
-            <KeyboardAvoidingView  behavior={Platform.OS ==="android" ? "padding": "height"}>
+            <KeyboardAvoidingView  behavior={Platform.OS ==="ios" ? "padding": "height" }
+            keyboardVerticalOffset={Platform.OS==="ios" ? 20:0}>
 
                 <View>
                     <Text style= {styles.textlogin}>Login</Text>

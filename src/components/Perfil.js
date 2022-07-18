@@ -1,10 +1,10 @@
-import React, { Component, useEffect} from "react";
+import React, { useState, useEffect} from "react";
 import { View} from 'react-native'
 import styles from '../styles/perfil'
 import {Avatar, Title, Caption, Text,} from "react-native-paper"
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
-import perfil from "../styles/perfil";
+
 
 const PerfilUser = () => {
   const [perfil, setPerfil] = useState([])

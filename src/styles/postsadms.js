@@ -92,8 +92,8 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         zIndex: 2,
-        marginTop: 15,
-        marginBottom:10
+        marginTop: 5
+        
     },
     name:{
       color:'#fff'

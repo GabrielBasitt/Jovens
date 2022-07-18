@@ -5,7 +5,7 @@ import * as ImagePicker from "expo-image-picker";
 
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
-const cadastroPostagem = () => {
+const Cadastropostagem = () => {
     
     const [image, setImage] = useState(null);
 
@@ -113,4 +113,4 @@ const cadastroPostagem = () => {
                 </ImageBackground>
                 </View>
     )}
-export default cadastroPostagem
+export default Cadastropostagem

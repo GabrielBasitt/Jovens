@@ -128,11 +128,6 @@ const EditarPerfilScreen = () => {
           onChangeText={handleIdadeChange}
           autoCorrect={false}>
           </TextInput>
-          <TouchableOpacity
-            style={styles.btnE}
-            onPress={postPerfil}>
-            <Text style={styles.editar}>Editar</Text>
-          </TouchableOpacity>
         </View>
           <TouchableOpacity
             style={styles.btnE}
