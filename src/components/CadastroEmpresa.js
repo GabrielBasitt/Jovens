@@ -4,7 +4,7 @@ import styles from "../styles/cadastroempresa"
 import {useState} from "react";
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 
-const Cadastroempresa = () => {
+const Cadastroempresa = ({navigation}) => {
 
     const [nome_empresa, setNome_empresa] = useState('')
     const [cnpj, setCnpj] = useState('')

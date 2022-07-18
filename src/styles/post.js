@@ -10,7 +10,6 @@ export default StyleSheet.create({
         height: "100%"
       },
       backGround:{
-        height: "100%",
         width: "100%",
         alignItems:"center",
         zIndex: 1
@@ -39,15 +38,6 @@ export default StyleSheet.create({
         justifyContent:'center',
         alignItems:'center'
        },
-      frase:{
-        fontSize:22,
-        textAlign: 'center',
-        margin:3,
-        marginTop:22,
-        marginBottom:160
-        //fontFamily tem que ver
-        // fontWeight
-      },  
         viewInputs:{
             justifyContent: "center",
             alignItems: "center",
@@ -65,15 +55,16 @@ export default StyleSheet.create({
             textAlign:'center',
             margin: 10
         },
-        desc:{ 
-            height: 40,
-            width: 350,
-            backgroundColor:"#fff",
-            borderRadius: 20,
-            borderColor: '#000',
-            borderWidth: 2,
-            zIndex: 2,
-            textAlign:'center'
+        descricao:{
+          height: 40,
+          width:350,
+          borderRadius: 20,
+          backgroundColor:"#fff",
+          borderColor: '#000',
+          borderWidth: 2,
+          zIndex: 2,
+          textAlign:'center',
+          margin: 10
         },
         link:{ 
             height: 40,
@@ -95,8 +86,7 @@ export default StyleSheet.create({
             alignItems: 'center',
             justifyContent:'center',
             zIndex: 2,
-            marginTop: 15,
-            marginBottom:10
+            marginTop: 40,
         },
         name:{
           color:'#fff'

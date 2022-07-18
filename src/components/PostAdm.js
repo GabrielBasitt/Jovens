@@ -109,3 +109,4 @@ const Cadastropostagemadm = () => {
                 </View>
     )}
 export default Cadastropostagemadm
+

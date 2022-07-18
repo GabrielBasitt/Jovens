@@ -10,32 +10,29 @@ export default StyleSheet.create({
         height: "100%"
       },
       backGround:{
-        height:"100%",
         width: "100%",
         alignItems:"center",
         zIndex: 1,
-        flex:1,
-        position:'absolute'
-        
-        
+        marginBottom: -230
       },
       textlogin:{
         fontSize:50,
         textAlign:'center',
-        marginTop:110
+        marginTop:-100
       },
       frase:{
         fontSize:22,
         textAlign: 'center',
         margin:3,
         marginTop:22,
-        marginBottom:160
-        //fontFamily tem que ver
-        // fontWeight
+        marginBottom:70
       },  
         viewInputs:{
             justifyContent: "center",
             alignItems: "center",
+            width: "100%",
+            height: "40%",
+            marginBottom: 100
         },
         inpEmail:{ 
             height: 40,
@@ -68,8 +65,7 @@ export default StyleSheet.create({
             alignItems: 'center',
             justifyContent:'center',
             zIndex: 2,
-            marginTop: 40,
-            marginBottom:10
+            marginTop: 30,
         },
         name:{
           color:'#fff'

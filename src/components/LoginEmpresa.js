@@ -9,7 +9,6 @@ export default function LogarEmpresa({navigation}){
     const [senha, setSenha] = useState('')
     const handleEmailChange = email => setEmail(email)
     const handleSenhaChange = senha => setSenha(senha)
-    
     const getEmpresa = async () => {
         if (email && senha != "") {
         try{
@@ -27,17 +26,16 @@ export default function LogarEmpresa({navigation}){
             }else{
                 const data = await response.json()
                 setEmpresa(data)
-                navigation.navigate("Home")
+                navigation.navigate("HomeNavigation")
                 }
         }catch(error){
             console.log(error)
                 }}}
     return(
-        <View style={styles.container}>
+        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS == "android" ? "padding": "height"}>
             <ImageBackground 
-                source = {bolaVerde} style={styles.backGround}  >
-            <KeyboardAvoidingView  behavior={Platform.OS ==="ios" ? "padding": "height" }
-            keyboardVerticalOffset={Platform.OS==="ios" ? 20:0}>
+            source = {bolaVerde} style={styles.backGround}  >
+            <View>
 
                 <View>
                     <Text style= {styles.textlogin}>Login</Text>
@@ -45,10 +43,11 @@ export default function LogarEmpresa({navigation}){
                 <View>
                     <Text  style={styles.frase}>Informe seu usuário e senha!</Text>
                 </View>
+                
                 <View style ={styles.viewInputs}>
                     <TextInput style = {styles.inpEmail}
                     value={email}
-                    placeholder="Digite seu email "
+                    placeholder="Digite o seu email"
                      onChangeText={handleEmailChange}
                      autoCorrect={false}
                     />
@@ -64,8 +63,9 @@ export default function LogarEmpresa({navigation}){
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
                 </View>
-                </KeyboardAvoidingView>
+                </View>
     </ImageBackground>
+</KeyboardAvoidingView>
 
-</View>
+
     )}

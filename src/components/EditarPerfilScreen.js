@@ -58,8 +58,8 @@ const EditarPerfilScreen = () => {
       const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
       if (status !== 'grandet') {
       }
-    }
-    fetchData()}
+    }}
+    fetchData()
 }, [])
 
   const PickImage = async () => {
@@ -106,7 +106,7 @@ const EditarPerfilScreen = () => {
           <Icon name="map-marker-radius" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
           <TextInput style={styles.text} 
            value={cidade}
-          placeholder="Digite sua cidade"
+          placeholder="Digite o nome de sua cidade"
           onChangeText={handleCidadeChange}
           autoCorrect={false}>
           </TextInput>
@@ -115,7 +115,7 @@ const EditarPerfilScreen = () => {
           <Icon name="phone" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
           <TextInput style={styles.text} 
             value={telefone}
-          placeholder="Digite seu número"
+          placeholder="Digite seu número após inserir https://wa.me/"
           onChangeText={handleTelefoneChange}
           autoCorrect={false}>
           </TextInput>

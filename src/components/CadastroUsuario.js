@@ -4,7 +4,7 @@ import styles from "../styles/cadastrousuario"
 import React from "react"
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
 
-const Cadastrousuario = () => {
+const Cadastrousuario = ({navigation}) => {
 
     const [nome_completo, setNome_completo] = useState('')
     const [cpf, setCpf] = useState('')
@@ -58,20 +58,20 @@ const Cadastrousuario = () => {
     }
 
     return (
-        <View style={styles.container}>
-            <View  style={styles.container}>
+        <View  style={styles.container}>
+            <View style={styles.container}>
                 <ImageBackground
                     source={bolaVerde} style={styles.backGround}  >
-                    <KeyboardAvoidingView behavior={Platform.OS =="android" ? "padding": "height"} style={styles.viewInputs}>
+                    <KeyboardAvoidingView behavior={Platform.OS =="android" ? "position": "height" } style={styles.viewInputs}>
                         <TextInput style={styles.inpName} 
                         value={nome_completo}
-                        placeholder="Digite seu nome"
+                        placeholder="Digite o nome da empresa"
                         onChangeText={handleNome_completoChange}
                         autoCorrect={false}
                            />
                         <TextInput style={styles.inpCPF}
                             value={cpf}
-                            placeholder="Digite seu cpf"
+                            placeholder="Digite seu Cpf"
                             onChangeText={handleCpfChange}
                             autoCorrect={false}
                             />
@@ -89,22 +89,22 @@ const Cadastrousuario = () => {
                             />
                         <TextInput style={styles.inpEmail}
                             value={email}
-                           placeholder="Digite um email"
+                            placeholder="Digite seu e-mail"
                              onChangeText={handleEmailChange}
                              autoCorrect={false}
                             />
                         <TextInput style={styles.inpSenha}
                                 value={senha}
-                                placeholder="Digite sua senha"
+                                placeholder="Digite uma senha"
                                 onChangeText={handleSenhaChange}
-                                autoCorrect={false}
+                                  autoCorrect={false}
                             />
                         <TouchableOpacity
                             style={styles.btnC}
                             onPress={postUser}>
                             <Text style={styles.cadastrar}>Cadastrar</Text>
                         </TouchableOpacity>
-                        </KeyboardAvoidingView>
+                    </KeyboardAvoidingView>
                 </ImageBackground>
             </View>
         </View>

@@ -13,5 +13,4 @@ const FeedAdmStack = () => {
         </Drawer.Navigator>
     )
 }
-
 export default FeedAdmStack

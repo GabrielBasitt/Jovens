@@ -106,6 +106,3 @@ cadastrar:{
     color:'#fff'
   }
 })
-
-     
- 

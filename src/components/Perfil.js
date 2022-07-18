@@ -1,10 +1,23 @@
-import React, { useState, useEffect} from "react";
-import { View} from 'react-native'
+import React, { useState, useEffect, useCallback} from "react";
+import { View, Alert, Button, Linking} from 'react-native'
 import styles from '../styles/perfil'
-import {Avatar, Title, Caption, Text,} from "react-native-paper"
+import {Avatar, Title, Caption, Text, } from "react-native-paper"
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
 
+
+const supportedURL = "https://wa.me/554888520572";
+const OpenURLButton = ({ url, children }) => {
+  const handlePress = useCallback(async () => {
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+    } else {
+      Alert.alert(`Don't know how to open this URL: ${url}`);
+    }
+  }, [url]);
+  return <Button title={children} onPress={handlePress} />;
+};
 
 const PerfilUser = () => {
   const [perfil, setPerfil] = useState([])
@@ -42,7 +55,7 @@ const PerfilUser = () => {
         </View>
       </View>
               <Title style ={styles.title}
-             autoCorrect={false}>{perfil.nome_perfil}</Title>
+             autoCorrect={false}>${perfil.nome_perfil}</Title>
               <Caption style ={styles.caption}
               autoCorrect={false}
               >{perfil.nome_usuario}</Caption> 
@@ -55,8 +68,7 @@ const PerfilUser = () => {
         </View>
         <View style={styles.row}>
           <Icon name="phone" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
-          <Text style={styles.text}
-          > https://wa.me/554888520572{perfil.telefone}</Text>
+          <OpenURLButton  style={styles.text} url={supportedURL}>{`https://wa.me/${perfil.telefone}`}</OpenURLButton>
         </View>
         <View style={styles.row}>
           <Icon name="account" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />

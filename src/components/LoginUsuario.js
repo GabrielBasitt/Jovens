@@ -26,7 +26,7 @@ export default function LogarUsuario({navigation}){
             }else{
                 const data = await response.json()
                 setPessoa(data)
-                navigation.navigate("Home")
+                navigation.navigate("HomeNavigation")
                 }
         }catch(error){
             console.log(error)
@@ -35,9 +35,9 @@ export default function LogarUsuario({navigation}){
     }
     return(
               
-            <KeyboardAvoidingView style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} behavior={Platform.OS == "android" ? "padding": "height"}>
             <ImageBackground 
-        source = {bolaVerde} style={styles.backGround}  >
+            source = {bolaVerde} style={styles.backGround}  >
             <View>
 
                 <View>
@@ -50,20 +50,19 @@ export default function LogarUsuario({navigation}){
                 <View style ={styles.viewInputs}>
                     <TextInput style = {styles.inpEmail}
                     value={email}
-                    placeholder="Insira o seu email"
+                    placeholder="Digite o seu email"
                      onChangeText={handleEmailChange}
                      autoCorrect={false}
                     />
                     <TextInput style = {styles.inpSenha}
                     value={senha}
-                    placeholder="escreva sua senha"
+                    placeholder="Digite sua senha"
                     onChangeText={handleSenhaChange}
                     autoCorrect={false}
                     />
                      <TouchableOpacity
                         style={styles.btnL}
                         onPress={() =>navigation.navigate('HomeNavigation')}>
-                        {/* // onPress={getPessoa}>  */}
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
                 </View>
@@ -72,4 +71,4 @@ export default function LogarUsuario({navigation}){
 </KeyboardAvoidingView>
 
 
-)}
+    )}
