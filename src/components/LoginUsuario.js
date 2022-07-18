@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, PanResponder} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, PanResponder, Platform} from 'react-native'
 import styles from '../styles/login' 
 
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
@@ -23,10 +23,6 @@ export default function LogarUsuario({navigation}){
                     senha: senha
                 })
             }
-            
-
-
-
             const response = await fetch('https://jovens-db.herokuapp.com/login/pessoa', requestOptions)
             if(response.status === 400){
             console.log("usuario nao econtrado");
@@ -69,7 +65,8 @@ export default function LogarUsuario({navigation}){
                     />
                      <TouchableOpacity
                         style={styles.btnL}
-                        onPress={getPessoa}> 
+                        onPress={() =>navigation.navigate('Home')}>
+                        {/* // onPress={getPessoa}>  */}
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
                 </View>
@@ -78,4 +75,4 @@ export default function LogarUsuario({navigation}){
 </KeyboardAvoidingView>
 
 
-    )}
+)}

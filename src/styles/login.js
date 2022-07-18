@@ -13,7 +13,9 @@ export default StyleSheet.create({
         height:"100%",
         width: "100%",
         alignItems:"center",
-        zIndex: 1
+        zIndex: 1,
+        flex:1,
+        position:'absolute'
         
         
       },

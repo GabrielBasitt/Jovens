@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, TouchableOpacity, TextInput, Image, Platform } from 'react-native';
+import { View, TouchableOpacity, TextInput, Image, Platform, Text, KeyboardAvoidingView } from 'react-native';
 import * as ImagePicker from "expo-image-picker";
 import styles from '../styles/editarperfil';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -75,7 +75,7 @@ const EditarPerfilScreen = () => {
     }
   }
   return (
-    <KeyboardAvoidingView behavior={Platform.OS =="android" ? "padding": "height"} style={styles.container}>
+    <KeyboardAvoidingView behavior={Platform.OS ==="android" ? "padding": "height"} style={styles.container}>
     
       <TouchableOpacity onPress={PickImage}>
       <View style={styles.imgContainer}  resizeMode="center">
@@ -97,17 +97,17 @@ const EditarPerfilScreen = () => {
         </View>
         <View style={styles.row}>
           <Icon name="phone" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
-          <TextInput style={styles.text} placeholder="Digite seu número"></TextInput>
+          <TextInput style={styles.text} placeholder="DDigite seu telefone após inserir 'https://wa.me/"></TextInput>
         </View>
         <View style={styles.row}>
           <Icon name="account" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
           <TextInput style={styles.text} placeholder="Digite sua idade"></TextInput>
-          <TouchableOpacity
-                            style={styles.btnE}
-                            onPress={postPerfil}>
-                            <Text style={styles.editar}>Editar</Text>
-                        </TouchableOpacity>
         </View>
+          <TouchableOpacity
+            style={styles.btnE}
+            onPress={postPerfil}>
+            <Text style={styles.editar}>Editar</Text>
+          </TouchableOpacity>
       </View>
       
     </KeyboardAvoidingView>

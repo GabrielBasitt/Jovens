@@ -69,8 +69,7 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         zIndex: 2,
-        marginBottom:10,
-        margin:30,
+        marginTop:50,
         alignSelf:"center"
     },
     editar:{

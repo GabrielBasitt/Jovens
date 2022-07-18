@@ -55,7 +55,6 @@ const Tab = createBottomTabNavigator();
             ),
           }} /> 
       </Tab.Navigator> 
-    
  )
 export default MyTabs;  
 

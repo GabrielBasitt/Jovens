@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, Platform} from 'react-native'
 import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 
@@ -9,6 +9,7 @@ export default function LogarEmpresa({navigation}){
     const [senha, setSenha] = useState('')
     const handleEmailChange = email => setEmail(email)
     const handleSenhaChange = senha => setSenha(senha)
+    
     const getEmpresa = async () => {
         if (email && senha != "") {
         try{
@@ -35,7 +36,7 @@ export default function LogarEmpresa({navigation}){
         <View style={styles.container}>
             <ImageBackground 
                 source = {bolaVerde} style={styles.backGround}  >
-            <KeyboardAvoidingView  behavior={Platform.OS =="android" ? "padding": "height"}>
+            <KeyboardAvoidingView  behavior={Platform.OS ==="android" ? "padding": "height"}>
 
                 <View>
                     <Text style= {styles.textlogin}>Login</Text>
