@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity} from 'react-native'
+import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableOpacity, Platform} from 'react-native'
 import styles from '../styles/login'
 const bolaVerde = require('../../assets/BolaVerdeDireita.png')
 

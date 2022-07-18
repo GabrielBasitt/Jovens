@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, TouchableOpacity, TextInput, Image, Platform } from 'react-native';
+import { View, TouchableOpacity, TextInput, Image, Platform, KeyboardAvoidingView, Text } from 'react-native';
 import * as ImagePicker from "expo-image-picker";
 import styles from '../styles/editarperfil';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -75,7 +75,7 @@ const EditarPerfilScreen = () => {
     }
   }
   return (
-    <KeyboardAvoidingView behavior={Platform.OS =="android" ? "padding": "height"} style={styles.container}>
+    <KeyboardAvoidingView behavior={Platform.OS == "android" ? "padding": "height"} style={styles.container}>
     
       <TouchableOpacity onPress={PickImage}>
       <View style={styles.imgContainer}  resizeMode="center">
@@ -85,35 +85,57 @@ const EditarPerfilScreen = () => {
       <View style={styles.userInfoTitles}>
       <View style={styles.row}>
           <Icon name="account-circle" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
-          <TextInput style={styles.text} placeholder="Digite um nome"></TextInput>
+          <TextInput style={styles.text} 
+          value={nome_perfil}
+          placeholder="Digite um nome"
+          onChangeText={handleNome_perfilChange}
+          autoCorrect={false}
+         >
+        </TextInput>
         </View>
         <View style={styles.row}>
           <Icon name="account-circle" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
-          <TextInput style={styles.text} placeholder="Digite um nome de usuário"></TextInput>
+          <TextInput style={styles.text} 
+          value={nome_usuario}
+          placeholder="Digite um nome de usuário"
+          onChangeText={handleNome_usuarioChange}
+          autoCorrect={false}
+          ></TextInput>
         </View>
         <View style={styles.row}>
           <Icon name="map-marker-radius" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
-          <TextInput style={styles.text} placeholder="Digite sua cidade"></TextInput>
+          <TextInput style={styles.text} 
+           value={cidade}
+          placeholder="Digite sua cidade"
+          onChangeText={handleCidadeChange}
+          autoCorrect={false}>
+          </TextInput>
         </View>
         <View style={styles.row}>
           <Icon name="phone" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
-          <TextInput style={styles.text} placeholder="Digite seu número"></TextInput>
+          <TextInput style={styles.text} 
+            value={telefone}
+          placeholder="Digite seu número"
+          onChangeText={handleTelefoneChange}
+          autoCorrect={false}>
+          </TextInput>
         </View>
         <View style={styles.row}>
           <Icon name="account" style={{ left: 30, zIndex: 90 }} color="#777777" size={25} />
-          <TextInput style={styles.text} placeholder="Digite sua idade"></TextInput>
+          <TextInput style={styles.text} 
+          value={idade}
+          placeholder="Digite sua idade"
+          onChangeText={handleIdadeChange}
+          autoCorrect={false}>
+          </TextInput>
           <TouchableOpacity
-                            style={styles.btnE}
-                            onPress={postPerfil}>
-                            <Text style={styles.editar}>Editar</Text>
-                        </TouchableOpacity>
+            style={styles.btnE}
+            onPress={postPerfil}>
+            <Text style={styles.editar}>Editar</Text>
+          </TouchableOpacity>
         </View>
       </View>
-      
     </KeyboardAvoidingView>
-
-
   );
 };
-
 export default EditarPerfilScreen;

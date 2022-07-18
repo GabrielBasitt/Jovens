@@ -110,11 +110,6 @@ const data = [
 export default function Feed(){
    
   
-<<<<<<< HEAD
-const Item = ({image, descricao, clienteId, title }) => (
-<View >
-<Text>{clienteId}</Text>
-=======
 const Item = ({image, descricao,  title, icon, nome }) => (
 <View>
 <View style={styles.perfil}>
@@ -125,7 +120,6 @@ resizeMode="cover"
 />
 < Text style={styles.nome}>{nome}</Text>
 </View>
->>>>>>> 6f19b0575c7440521d6a4128348d68cc29b1ff1c
 <Text style={styles.title}>{title} </Text>
 
 <View style={styles.imageContainer}>
