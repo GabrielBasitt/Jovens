@@ -55,13 +55,12 @@ const PerfilUser = () => {
         </View>
       </View>
               <Title style ={styles.title}
-             autoCorrect={false}>${perfil.nome_perfil}</Title>
+             autoCorrect={false}>{perfil.nome_perfil}</Title>
               <Caption style ={styles.caption}
               autoCorrect={false}
               >{perfil.nome_usuario}</Caption> 
       <View style={styles.userInfoTitles}>
         <View style={styles.row}>
-          <Icon name="map-marker-radius"  style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
           <Text style={styles.text}
           autoCorrect={false}
           >{perfil.cidade}</Text>
