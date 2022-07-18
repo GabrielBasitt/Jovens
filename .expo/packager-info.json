@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "devToolsPort": 19002,
   "expoServerPort": null,
   "packagerPort": null,
@@ -7,4 +8,13 @@
   "packagerNgrokUrl": null,
   "ngrokPid": null,
   "packagerPid": null
+=======
+  "webpackServerPort": 19006,
+  "expoServerNgrokUrl": "https://i4-kf6.anonymous.jovens.exp.direct",
+  "packagerNgrokUrl": "https://i4-kf6.anonymous.jovens.exp.direct",
+  "ngrokPid": 14484,
+  "expoServerPort": 19000,
+  "devToolsPort": 19002,
+  "packagerPort": 19000
+>>>>>>> 658056296044a4dfb6396072409e51c134c60524
 }

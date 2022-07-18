@@ -3,9 +3,6 @@ import {Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, TouchableO
 import styles from '../styles/login' 
 
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
-
-
-
 export default function LogarUsuario({navigation}){
     const [pessoa, setPessoa] = useState([])
     const [email, setEmail] = useState('')
