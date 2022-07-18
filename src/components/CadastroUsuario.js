@@ -20,7 +20,7 @@ const Cadastrousuario = ({navigation}) => {
     const handleEmailChange = email => setEmail(email)
     const handleSenhaChange = senha => SetSenha(senha)
 
-    const postUser = async () => {  
+    const postUser = async ({navigation}) => {  
 
     if (nome_completo && cpf && telefone && data_nascimento && email && senha != "") {
         try {

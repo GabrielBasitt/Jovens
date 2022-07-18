@@ -17,7 +17,7 @@ const EditarPerfilScreen = ({navigation}) => {
     const handleNome_usuarioChange = nome_usuario => setNome_usuario(nome_usuario)
     const handleIdadeChange = idade => setIdade(idade)
 
-    const postPerfil = async () => {  
+    const postPerfil = async ({navigation}) => {  
       if (nome_perfil && cidade && telefone && nome_usuario && idade != "") {
           try {
               const requestOptions = {
