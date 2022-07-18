@@ -4,7 +4,7 @@ import * as ImagePicker from "expo-image-picker";
 import styles from '../styles/editarperfil';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const EditarPerfilScreen = () => {
+const EditarPerfilScreen = ({navigation}) => {
     const [nome_perfil, setNome_perfil] = useState('')
     const [cidade, setCidade] = useState('')
     const [telefone, setTelefone] = useState('')
@@ -32,7 +32,7 @@ const EditarPerfilScreen = () => {
                   })
               }
               await fetch('https://jovens-db.herokuapp.com/perfil', requestOptions)
-              navigation.navigate('perfil')
+              navigation.navigate('PerfilNavigation')
              
           }catch( error){
               console.log(error)
