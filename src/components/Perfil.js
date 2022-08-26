@@ -6,7 +6,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons' 
 
 
-const supportedURL = "https://wa.me/554898222471";
+const supportedURL = "https://wa.me/554884041602";
 
 const OpenURLButton = ({ url, children }) => {
   const handlePress = useCallback(async () => {
@@ -57,22 +57,22 @@ const PerfilUser = () => {
         </View>
       </View>
               <Title style ={styles.title}
-             autoCorrect={false}>{perfil.nome_perfil}</Title>
+             autoCorrect={false}>{perfil.nome_perfil}Alice Félix</Title>
               <Caption style ={styles.caption}
               autoCorrect={false}
-              >{perfil.nome_usuario}</Caption> 
+              >@alicefelix{perfil.nome_usuario}</Caption> 
       <View style={styles.userInfoTitles}>
         <View style={styles.row}>
         <Icon name="map-marker-radius"  style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
           <Text style={styles.text}
           autoCorrect={false}
-          >{perfil.cidade}</Text>
+          >Florianópolis{perfil.cidade}</Text>
         </View>
         <View style={styles.row}>
           <Icon name="account" style={{left: 30, zIndex: 90}} color ="#777777" size={25} />
           <Text style={styles.text}
           autoCorrect={false}
-          >{perfil.idade}</Text>
+          >9 anos{perfil.idade}</Text>
         </View>
         <View style={styles.row}>
           <OpenURLButton placeholder="Entrar em contato" url={supportedURL}>

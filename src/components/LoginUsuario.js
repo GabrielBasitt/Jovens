@@ -3,36 +3,37 @@ import {Alert,Text, View ,ImageBackground, KeyboardAvoidingView, TextInput, Touc
 import styles from '../styles/login' 
 
 const bolaVerde = require('../../assets/BolaVerdeEsquerda.png')
+
 export default function LogarUsuario({navigation}){
-    const [pessoa, setPessoa] = useState([])
-    const [email, setEmail] = useState('')
-    const [senha, setSenha] = useState('')
-    const handleEmailChange = email => setEmail(email)
-    const handleSenhaChange = senha => setSenha(senha)
-    const getPessoa = async () => {
-        if (email && senha != "") {
-        try{
-            const requestOptions = {
-                method: 'POST',
-                headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify({
-                    email: email,
-                    senha: senha
-                })
-            }
-            const response = await fetch('https://jovens-db.herokuapp.com/login/pessoa', requestOptions)
-            if(response.status === 400){
-            Alert.alert("Erro!","Usuário não encontrado");
-            }else{
-                const data = await response.json()
-                setPessoa(data)
-                navigation.navigate("HomeNavigation")
-                }
-        }catch(error){
-            console.log(error)
-                }
-   }
-    }
+//     const [pessoa, setPessoa] = useState([])
+//     const [email, setEmail] = useState('')
+//     const [senha, setSenha] = useState('')
+//     const handleEmailChange = email => setEmail(email)
+//     const handleSenhaChange = senha => setSenha(senha)
+//     const getPessoa = async () => {
+//         if (email && senha != "") {
+//         try{
+//             const requestOptions = {
+//                 method: 'POST',
+//                 headers: { 'Content-type': 'application/json' },
+//                 body: JSON.stringify({
+//                     email: email,
+//                     senha: senha
+//                 })
+//             }
+//             const response = await fetch('https://jovens-db.herokuapp.com/login/pessoa', requestOptions)
+//             if(response.status === 400){
+//             Alert.alert("Erro!","Usuário não encontrado");
+//             }else{
+//                 const data = await response.json()
+//                 setPessoa(data)
+//                 navigation.navigate("HomeNavigation")
+//                 }
+//         }catch(error){
+//             console.log(error)
+//                 }
+//    }}
+    
     return(
               
             <KeyboardAvoidingView style={styles.container} behavior={Platform.OS == "android" ? "padding": "height"}>
@@ -49,20 +50,20 @@ export default function LogarUsuario({navigation}){
                 
                 <View style ={styles.viewInputs}>
                     <TextInput style = {styles.inpEmail}
-                    value={email}
+                    // value={email}
                     placeholder="Digite o seu email"
-                     onChangeText={handleEmailChange}
+                    //  onChangeText={handleEmailChange}
                      autoCorrect={false}
                     />
                     <TextInput style = {styles.inpSenha}
-                    value={senha}
+                    // value={senha}
                     placeholder="Digite sua senha"
-                    onChangeText={handleSenhaChange}
+                    // onChangeText={handleSenhaChange}
                     autoCorrect={false}
                     />
                      <TouchableOpacity
                         style={styles.btnL}
-                        onPress={getPessoa}>
+                        onPress={() =>navigation.navigate('HomeNavigation')}>
                         <Text style={styles.name}>Entrar</Text> 
                         </TouchableOpacity>
                 </View>
